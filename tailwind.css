@@ -1,0 +1,341 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --body-text-20-font-family: "Jost", Helvetica;
+  --body-text-20-font-size: 20px;
+  --body-text-20-font-style: normal;
+  --body-text-20-font-weight: 400;
+  --body-text-20-letter-spacing: 0px;
+  --body-text-20-line-height: 36px;
+  --body-text-extra-small-font-family: "Jost", Helvetica;
+  --body-text-extra-small-font-size: 12px;
+  --body-text-extra-small-font-style: normal;
+  --body-text-extra-small-font-weight: 400;
+  --body-text-extra-small-letter-spacing: 0px;
+  --body-text-extra-small-line-height: normal;
+  --body-text-large-font-family: "Jost", Helvetica;
+  --body-text-large-font-size: 24px;
+  --body-text-large-font-style: normal;
+  --body-text-large-font-weight: 400;
+  --body-text-large-letter-spacing: 0px;
+  --body-text-large-line-height: 36px;
+  --body-text-regular-font-family: "Jost", Helvetica;
+  --body-text-regular-font-size: 16px;
+  --body-text-regular-font-style: normal;
+  --body-text-regular-font-weight: 400;
+  --body-text-regular-letter-spacing: 0px;
+  --body-text-regular-line-height: normal;
+  --body-text-small-font-family: "Jost", Helvetica;
+  --body-text-small-font-size: 14px;
+  --body-text-small-font-style: normal;
+  --body-text-small-font-weight: 400;
+  --body-text-small-letter-spacing: 0px;
+  --body-text-small-line-height: normal;
+  --card: 0px 4px 12px 0px rgba(0, 0, 0, 0.14);
+  --display-font-1-bold-font-family: "Anton", Helvetica;
+  --display-font-1-bold-font-size: 64px;
+  --display-font-1-bold-font-style: normal;
+  --display-font-1-bold-font-weight: 400;
+  --display-font-1-bold-letter-spacing: 0px;
+  --display-font-1-bold-line-height: normal;
+  --display-font-1-medium-font-family: "Anton", Helvetica;
+  --display-font-1-medium-font-size: 64px;
+  --display-font-1-medium-font-style: normal;
+  --display-font-1-medium-font-weight: 400;
+  --display-font-1-medium-letter-spacing: 0px;
+  --display-font-1-medium-line-height: normal;
+  --display-font-1-semi-bold-font-family: "Anton", Helvetica;
+  --display-font-1-semi-bold-font-size: 64px;
+  --display-font-1-semi-bold-font-style: normal;
+  --display-font-1-semi-bold-font-weight: 400;
+  --display-font-1-semi-bold-letter-spacing: 0px;
+  --display-font-1-semi-bold-line-height: normal;
+  --display-font-2-bold-font-family: "Anton", Helvetica;
+  --display-font-2-bold-font-size: 56px;
+  --display-font-2-bold-font-style: normal;
+  --display-font-2-bold-font-weight: 400;
+  --display-font-2-bold-letter-spacing: 0px;
+  --display-font-2-bold-line-height: normal;
+  --display-font-2-medium-font-family: "Anton", Helvetica;
+  --display-font-2-medium-font-size: 56px;
+  --display-font-2-medium-font-style: normal;
+  --display-font-2-medium-font-weight: 400;
+  --display-font-2-medium-letter-spacing: 0px;
+  --display-font-2-medium-line-height: normal;
+  --display-font-2-semi-bold-font-family: "Anton", Helvetica;
+  --display-font-2-semi-bold-font-size: 56px;
+  --display-font-2-semi-bold-font-style: normal;
+  --display-font-2-semi-bold-font-weight: 400;
+  --display-font-2-semi-bold-letter-spacing: 0px;
+  --display-font-2-semi-bold-line-height: normal;
+  --gold-100: rgba(255, 245, 197, 1);
+  --gold-200: rgba(255, 235, 133, 1);
+  --gold-300: rgba(255, 218, 70, 1);
+  --gold-400: rgba(255, 199, 27, 1);
+  --gold-50: rgba(255, 252, 234, 1);
+  --gold-500: rgba(255, 165, 0, 1);
+  --gold-600: rgba(226, 124, 0, 1);
+  --gold-700: rgba(187, 85, 2, 1);
+  --gold-800: rgba(152, 66, 8, 1);
+  --gold-900: rgba(124, 54, 11, 1);
+  --gold-950: rgba(72, 26, 0, 1);
+  --gray-100: rgba(204, 204, 204, 1);
+  --gray-200: rgba(192, 192, 192, 1);
+  --gray-300: rgba(179, 179, 179, 1);
+  --gray-50: rgba(230, 230, 230, 1);
+  --gray-500: rgba(77, 77, 77, 1);
+  --gray-600: rgba(64, 64, 64, 1);
+  --gray-700: rgba(51, 51, 51, 1);
+  --gray-800: rgba(38, 38, 38, 1);
+  --gray400-raw-color: rgba(128, 128, 128, 1);
+  --h1-bold-font-family: "Anton", Helvetica;
+  --h1-bold-font-size: 48px;
+  --h1-bold-font-style: normal;
+  --h1-bold-font-weight: 400;
+  --h1-bold-letter-spacing: 0px;
+  --h1-bold-line-height: normal;
+  --h1-medium-font-family: "Anton", Helvetica;
+  --h1-medium-font-size: 48px;
+  --h1-medium-font-style: normal;
+  --h1-medium-font-weight: 400;
+  --h1-medium-letter-spacing: 0px;
+  --h1-medium-line-height: normal;
+  --h1-semi-bold-font-family: "Anton", Helvetica;
+  --h1-semi-bold-font-size: 48px;
+  --h1-semi-bold-font-style: normal;
+  --h1-semi-bold-font-weight: 400;
+  --h1-semi-bold-letter-spacing: 0px;
+  --h1-semi-bold-line-height: normal;
+  --h2-bold-font-family: "Anton", Helvetica;
+  --h2-bold-font-size: 46px;
+  --h2-bold-font-style: normal;
+  --h2-bold-font-weight: 400;
+  --h2-bold-letter-spacing: 0px;
+  --h2-bold-line-height: normal;
+  --h2-medium-font-family: "Anton", Helvetica;
+  --h2-medium-font-size: 46px;
+  --h2-medium-font-style: normal;
+  --h2-medium-font-weight: 400;
+  --h2-medium-letter-spacing: 0px;
+  --h2-medium-line-height: normal;
+  --h2-semi-bold-font-family: "Anton", Helvetica;
+  --h2-semi-bold-font-size: 46px;
+  --h2-semi-bold-font-style: normal;
+  --h2-semi-bold-font-weight: 400;
+  --h2-semi-bold-letter-spacing: 0px;
+  --h2-semi-bold-line-height: normal;
+  --h3-bold-font-family: "Anton", Helvetica;
+  --h3-bold-font-size: 40px;
+  --h3-bold-font-style: normal;
+  --h3-bold-font-weight: 400;
+  --h3-bold-letter-spacing: 0px;
+  --h3-bold-line-height: normal;
+  --h3-medium-font-family: "Anton", Helvetica;
+  --h3-medium-font-size: 40px;
+  --h3-medium-font-style: normal;
+  --h3-medium-font-weight: 400;
+  --h3-medium-letter-spacing: 0px;
+  --h3-medium-line-height: normal;
+  --h3-semi-bold-font-family: "Anton", Helvetica;
+  --h3-semi-bold-font-size: 40px;
+  --h3-semi-bold-font-style: normal;
+  --h3-semi-bold-font-weight: 400;
+  --h3-semi-bold-letter-spacing: 0.8px;
+  --h3-semi-bold-line-height: normal;
+  --h4-bold-font-family: "Anton", Helvetica;
+  --h4-bold-font-size: 36px;
+  --h4-bold-font-style: normal;
+  --h4-bold-font-weight: 400;
+  --h4-bold-letter-spacing: 0px;
+  --h4-bold-line-height: normal;
+  --h4-medium-font-family: "Anton", Helvetica;
+  --h4-medium-font-size: 36px;
+  --h4-medium-font-style: normal;
+  --h4-medium-font-weight: 400;
+  --h4-medium-letter-spacing: 0px;
+  --h4-medium-line-height: normal;
+  --h4-semi-bold-font-family: "Anton", Helvetica;
+  --h4-semi-bold-font-size: 36px;
+  --h4-semi-bold-font-style: normal;
+  --h4-semi-bold-font-weight: 400;
+  --h4-semi-bold-letter-spacing: 0px;
+  --h4-semi-bold-line-height: normal;
+  --h5-bold-font-family: "Anton", Helvetica;
+  --h5-bold-font-size: 24px;
+  --h5-bold-font-style: normal;
+  --h5-bold-font-weight: 400;
+  --h5-bold-letter-spacing: 0px;
+  --h5-bold-line-height: normal;
+  --h5-medium-font-family: "Anton", Helvetica;
+  --h5-medium-font-size: 24px;
+  --h5-medium-font-style: normal;
+  --h5-medium-font-weight: 400;
+  --h5-medium-letter-spacing: 0px;
+  --h5-medium-line-height: normal;
+  --h5-semi-bold-font-family: "Anton", Helvetica;
+  --h5-semi-bold-font-size: 24px;
+  --h5-semi-bold-font-style: normal;
+  --h5-semi-bold-font-weight: 400;
+  --h5-semi-bold-letter-spacing: 0px;
+  --h5-semi-bold-line-height: normal;
+  --h6-bold-font-family: "Anton", Helvetica;
+  --h6-bold-font-size: 16px;
+  --h6-bold-font-style: normal;
+  --h6-bold-font-weight: 400;
+  --h6-bold-letter-spacing: 0px;
+  --h6-bold-line-height: normal;
+  --h6-medium-font-family: "Anton", Helvetica;
+  --h6-medium-font-size: 16px;
+  --h6-medium-font-style: normal;
+  --h6-medium-font-weight: 400;
+  --h6-medium-letter-spacing: 0px;
+  --h6-medium-line-height: normal;
+  --h6-semi-bold-font-family: "Anton", Helvetica;
+  --h6-semi-bold-font-size: 16px;
+  --h6-semi-bold-font-style: normal;
+  --h6-semi-bold-font-weight: 400;
+  --h6-semi-bold-letter-spacing: 0px;
+  --h6-semi-bold-line-height: normal;
+  --h7-font-family: "Anton", Helvetica;
+  --h7-font-size: 18px;
+  --h7-font-style: normal;
+  --h7-font-weight: 400;
+  --h7-letter-spacing: 0.36px;
+  --h7-line-height: normal;
+  --lime-100: rgba(237, 243, 212, 1);
+  --lime-200: rgba(219, 232, 174, 1);
+  --lime-300: rgba(194, 216, 126, 1);
+  --lime-400: rgba(169, 198, 85, 1);
+  --lime-50: rgba(247, 250, 235, 1);
+  --lime-500: rgba(152, 187, 60, 1);
+  --lime-600: rgba(108, 136, 40, 1);
+  --lime-700: rgba(82, 104, 35, 1);
+  --lime-800: rgba(67, 84, 32, 1);
+  --lime-900: rgba(58, 72, 31, 1);
+  --lime-950: rgba(29, 39, 12, 1);
+  --orange-100: rgba(255, 247, 197, 1);
+  --orange-200: rgba(255, 239, 133, 1);
+  --orange-300: rgba(255, 206, 27, 1);
+  --orange-400: rgba(255, 206, 27, 1);
+  --orange-50: rgba(255, 253, 234, 1);
+  --orange-500: rgba(255, 172, 0, 1);
+  --orange-600: rgba(226, 130, 0, 1);
+  --orange-700: rgba(187, 91, 2, 1);
+  --orange-800: rgba(152, 70, 8, 1);
+  --orange-900: rgba(124, 57, 11, 1);
+  --orange-950: rgba(72, 28, 0, 1);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
