@@ -16,30 +16,29 @@ export const NavBarWrapper = ({ className }) => {
 
   return (
     <nav
-      className={`flex items-center justify-between px-6 md:px-12 py-4 w-full max-w-[1440px] mx-auto ${className}`}
+      className={`relative flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 w-full max-w-[1440px] mx-auto ${className}`}
     >
       {/* Logo */}
       <img
-        className="h-12 w-auto object-contain"
+        className="h-[60px] w-auto object-contain cursor-pointer"
         alt="Logo"
         src="/assets/images/logo.png"
       />
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center gap-10">
-        <div className="flex items-center gap-6">
-          {menuItems.map((item, idx) => (
-            <MenuItem key={idx} property1="default" text={item.text} />
-          ))}
-        </div>
+      <div className="hidden md:flex items-center gap-2 lg:gap-10 cursor-pointer">
+        {menuItems.map((item, idx) => (
+          <MenuItem key={idx} property1="default" text={item.text} />
+        ))}
         <Button property1="default" text="Join the Movement" />
       </div>
 
       {/* Mobile Hamburger */}
       <div className="md:hidden">
         <button
-          className="p-2 rounded-lg border border-gray-300"
+          className="p-2 rounded-lg border border-gray-300 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -52,7 +51,7 @@ export const NavBarWrapper = ({ className }) => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden z-50"
+            className="absolute cursor-pointer top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-3 md:hidden z-50"
           >
             {menuItems.map((item, idx) => (
               <MenuItem key={idx} property1="default" text={item.text} />
