@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../components/Button";
+import Footer from "../components/Footer/Footer";
 import { Discover } from "./Home/sections/Discover";
 import { Frame } from "./Home/sections/Frame";
 import { FrameWrapper } from "./Home/sections/FrameWrapper";
@@ -78,6 +79,88 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+      <Discover />
+
+      <div className="relative max-w-7xl mx-auto bg-[url('/assets/images/image.png')] bg-cover bg-center py-12 px-4 rounded-2xl h-auto lg:h-[500px]">
+        <div className="relative max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center gap-6 lg:mt-20">
+          {/* Left side text + bg box */}
+          <div className="relative flex-1 text-center lg:text-left">
+            <div className="absolute inset-0" />
+          </div>
+
+          <p className="relative  bg-black/40 rounded-2xl [font-family:'Anton',Helvetica] font-normal text-white text-[64px] text-center tracking-[0] leading-snug py-10 px-10">
+            YOU ARE YOUR COMMUNITY,
+            <br />
+            YOUR COMMUNITY IS YOU!
+          </p>
+
+          {/* Right side image */}
+          <div className="flex-1 flex justify-center lg:justify-end"></div>
+        </div>
+        <img
+          className="absolute top-[100px] right-0 w-40 md:w-56 h-auto"
+          alt="Group"
+          src="/assets/images/group-1413371873@2x.png"
+        />
+        <img
+          className="absolute bottom-[-20px] mt-6 w-32 md:w-48 h-auto mx-auto lg:mx-0"
+          alt="Group"
+          src="/assets/images/group-1413371874@2x.png"
+        />
+      </div>
+      <img
+        className="absolute w-28 h-72 lg:w-40 lg:h-[379px] object-cover right-0"
+        alt="Circle"
+        src="/assets/images/circle-v2-1@2x.png"
+      />
+      <FrameWrapper />
+
+      <div className="relative w-full bg-white py-16">
+        {/* Left Decorative Circle */}
+        <img
+          className="absolute w-24 h-72 lg:w-36 lg:h-[464px] object-cover"
+          alt="Circle"
+          src="/assets/images/circle-v3-1@2x.png"
+        />
+
+        <img
+          className=" absolute w-32 h-40 lg:w-44 lg:h-[195px] object-cover mt-6 lg:mt-0 right-0"
+          alt="Image"
+          src="/assets/images/image-2024-11-21t03-37-11-483z-2@2x.png"
+        />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Top Section */}
+          <div className="relative flex flex-col lg:flex-row items-start lg:items-center gap-8">
+            {/* Text Content */}
+            <div className="flex-1">
+              <h2 className="font-anton text-orange-500 text-2xl md:text-3xl lg:text-4xl mb-6 [font-family:'Anton',Helvetica] font-normal text-orange-500 text-4xl tracking-[0] leading-[normal]">
+                Build Civic Engagement
+              </h2>
+              <p className="font-body-text-large text-black text-base md:text-xl lg:text-2xl leading-relaxed py-4">
+                Get Curious Together brings together the people, places,
+                history, and events that make your community unique—all in one
+                easy-to-use platform.
+                <br />
+                <br />
+                Hear from the mayor and local leaders through interactive
+                widgets, and help students, families, and neighbors connect,
+                engage, and grow a stronger, more caring community.
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+
+          {/* Background image (full width under content) */}
+          <img
+            className="absolute bottom-0 left-0 w-full h-64 md:h-[400px] lg:h-[668px] object-cover -z-10"
+            alt="Background"
+            src="/assets/images/image-1.png"
+          />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };
