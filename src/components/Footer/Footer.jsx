@@ -16,7 +16,7 @@ export default function Footer() {
         backgroundPosition: "left -100px bottom",
       }}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-10 px-6 md:px-0">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-10 px-6">
         {/* Logo Section */}
         <div className="flex justify-center md:justify-end order-1 md:order-2">
           <img
@@ -48,7 +48,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
           {/* Quote Section */}
           <div className="text-white p-6 rounded-xl max-w-md relative">
-            <span class="absolute left-[-20px] top-[18px] text-[160px] leading-[0]">
+            <span class="absolute left-[0px] top-[18px] text-[160px] leading-[0]">
               “
             </span>
 
@@ -158,7 +158,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-1 px-6 md:px-0">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-1 px-6">
         {/* Left Side */}
         <div className="flex justify-start order-2 md:order-1 text-white font-body-text-large">
           ©{new Date().getFullYear()} Get Curious Together. All Rights Reserved

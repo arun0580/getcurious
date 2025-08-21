@@ -13,20 +13,13 @@ export const Home = () => {
 
       {/* Hero Section */}
 
-      <section className="relative w-full bg-[url('/assets/images/adobestock-280662181-1.png')] bg-cover bg-center px-6 md:px-12 py-16 md:py-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <section className="relative w-full bg-[url('/assets/images/adobestock-280662181-1.png')] bg-cover bg-center py-16 md:py-24">
+        <div className=" relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
           {/* Left Content */}
           <div className="space-y-6 text-center md:text-left">
-            {/* <p className="text-orange-500 text-2xl md:text-3xl font-anton">
-              GET
-            </p>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-black leading-tight">
-              CURIOUS TOGETHER
-            </h1> */}
-
             <div className="[font-family:'Anton',Helvetica] font-normal leading-[normal]">
               <img
-                className="absolute w-[40vw] max-w-[343px] h-auto top-[20px] left-[25%]"
+                className="absolute w-[40vw] max-w-[343px] h-auto top-[-30px] left-[25%]"
                 alt="Mask group"
                 src="/assets/images/mask-group-3@2x.png"
               />
@@ -36,7 +29,7 @@ export const Home = () => {
                 CURIOUS TOGETHER
               </span>
               <img
-                className="absolute w-[30vw] max-w-[275px] h-auto top-[37%] left-[31%] -translate-x-1/2"
+                className="absolute w-[30vw] max-w-[275px] h-auto top-[33%] left-[24%] -translate-x-1/2"
                 alt="Vector"
                 src="/assets/images/vector-22.svg"
               />
@@ -44,7 +37,7 @@ export const Home = () => {
 
             <Frame />
 
-            <div className="pt-4">
+            <div className="pt-4 cursor-pointer">
               <Button property1="default" text="Learn More" />
             </div>
           </div>
@@ -52,7 +45,7 @@ export const Home = () => {
           {/* Right Side Images */}
           <div className="grid grid-cols-2 gap-4">
             <img
-              className="absolute w-[156px] h-[124px] top-[40px] right-[11%] object-cover"
+              className="absolute w-[156px] h-[124px] top-[-80px] right-[-4%] object-cover"
               alt="Image"
               src="/assets/images/image-2024-11-21t03-37-18-070z-1@2x.png"
             />
@@ -81,39 +74,40 @@ export const Home = () => {
       </section>
 
       <Discover />
+      <div className="relative max-w-7xl w-full mx-auto px-0 md:px-6">
+        <div className="relative max-w-7xl mx-auto bg-[url('/assets/images/image.png')] bg-cover bg-center py-12 rounded-2xl h-auto lg:h-[500px]">
+          <div className="relative max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center gap-6 lg:mt-20 px-6 ">
+            {/* Left side text + bg box */}
+            <div className="relative flex-1 text-center lg:text-left">
+              <div className="absolute inset-0" />
+            </div>
 
-      <div className="relative max-w-7xl mx-auto bg-[url('/assets/images/image.png')] bg-cover bg-center py-12 px-4 rounded-2xl h-auto lg:h-[500px]">
-        <div className="relative max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center gap-6 lg:mt-20">
-          {/* Left side text + bg box */}
-          <div className="relative flex-1 text-center lg:text-left">
-            <div className="absolute inset-0" />
+            <p className="relative  bg-black/40 rounded-2xl [font-family:'Anton',Helvetica] font-normal text-white text-[64px] text-center tracking-[0] leading-snug py-10 px-10">
+              YOU ARE YOUR COMMUNITY,
+              <br />
+              YOUR COMMUNITY IS YOU!
+            </p>
+
+            {/* Right side image */}
+            <div className="flex-1 flex justify-center lg:justify-end"></div>
           </div>
-
-          <p className="relative  bg-black/40 rounded-2xl [font-family:'Anton',Helvetica] font-normal text-white text-[64px] text-center tracking-[0] leading-snug py-10 px-10">
-            YOU ARE YOUR COMMUNITY,
-            <br />
-            YOUR COMMUNITY IS YOU!
-          </p>
-
-          {/* Right side image */}
-          <div className="flex-1 flex justify-center lg:justify-end"></div>
+          <img
+            className="absolute top-[100px] right-[-5px] w-40 md:w-56 h-auto"
+            alt="Group"
+            src="/assets/images/group-1413371873@2x.png"
+          />
+          <img
+            className="absolute bottom-[-20px]  left-[-12px] mt-6 w-32 md:w-48 h-auto mx-auto lg:mx-0"
+            alt="Group"
+            src="/assets/images/group-1413371874@2x.png"
+          />
         </div>
         <img
-          className="absolute top-[100px] right-0 w-40 md:w-56 h-auto"
-          alt="Group"
-          src="/assets/images/group-1413371873@2x.png"
-        />
-        <img
-          className="absolute bottom-[-20px] mt-6 w-32 md:w-48 h-auto mx-auto lg:mx-0"
-          alt="Group"
-          src="/assets/images/group-1413371874@2x.png"
+          className="absolute w-28 h-72 lg:w-40 lg:h-[379px] object-cover right-0"
+          alt="Circle"
+          src="/assets/images/circle-v2-1@2x.png"
         />
       </div>
-      <img
-        className="absolute w-28 h-72 lg:w-40 lg:h-[379px] object-cover right-0"
-        alt="Circle"
-        src="/assets/images/circle-v2-1@2x.png"
-      />
       <FrameWrapper />
 
       <div className="relative w-full bg-white py-16">
@@ -124,12 +118,7 @@ export const Home = () => {
           src="/assets/images/circle-v3-1@2x.png"
         />
 
-        <img
-          className=" absolute w-32 h-40 lg:w-44 lg:h-[195px] object-cover mt-6 lg:mt-0 right-0"
-          alt="Image"
-          src="/assets/images/image-2024-11-21t03-37-11-483z-2@2x.png"
-        />
-        <div className="relative max-w-7xl mx-auto px-6 md:px-0">
+        <div className="relative max-w-7xl mx-auto px-6">
           {/* Top Section */}
           <div className="relative flex flex-col lg:flex-row items-start lg:items-center gap-8">
             {/* Text Content */}
@@ -148,6 +137,11 @@ export const Home = () => {
                 engage, and grow a stronger, more caring community.
               </p>
             </div>
+            <img
+              className=" absolute w-32 h-40 lg:w-44 lg:h-[195px] object-cover mt-6 lg:mt-0 right-0 right-[-30%] bottom-[-29%]"
+              alt="Image"
+              src="/assets/images/image-2024-11-21t03-37-11-483z-2@2x.png"
+            />
           </div>
 
           {/* Bottom Section */}

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Discover = () => {
   return (
-    <section className="relative w-full bg-white py-20 px-4 md:px-12 lg:px-20">
+    <section className="relative w-full bg-white py-20 ">
       {/* Background/side floating images */}
 
       {/* Title */}
@@ -11,7 +11,7 @@ export const Discover = () => {
       </h2>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto relative">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto relative px-6">
         {/* Card 1 */}
         <div className="bg-white rounded-[30px] md:rounded-[50px] shadow-[0px_4px_25px_#00000026] p-8 flex flex-col items-start">
           <img
@@ -65,13 +65,13 @@ export const Discover = () => {
             share them with friends and family.
           </p>
           <img
-            className="absolute md:block absolute bottom-[-40px] right-[-100px] w-32 h-auto object-cover"
+            className="absolute md:block absolute bottom-[-25px] right-[-70px] w-32 h-auto object-cover"
             alt="Decoration"
             src="/assets/images/image-2024-11-21t03-37-11-483z-1@2x.png"
           />
         </div>
         <img
-          className="hidden md:block absolute top-[-130px] left-[-40px] w-40 h-auto object-cover"
+          className="hidden md:block absolute top-[-115px] left-[-90px] w-40 h-auto object-cover"
           alt="Decoration"
           src="/assets/images/image-2024-11-21t03-37-18-070z@2x.png"
         />

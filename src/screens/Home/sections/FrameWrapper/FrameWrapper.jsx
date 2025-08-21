@@ -3,7 +3,7 @@ import { Button } from "../../../../components/Button";
 
 export const FrameWrapper = () => {
   return (
-    <div className="relative max-w-7xl mx-auto px-4 md:px-0  py-20 flex flex-col lg:flex-row items-center lg:items-start gap-8 my-10">
+    <div className="relative max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row items-center lg:items-start gap-8 my-10">
       {/* Left Image */}
       <img
         className="w-full max-w-[300px] lg:max-w-[420px] object-cover rounded-lg"
