@@ -129,7 +129,7 @@ export const Home = () => {
           alt="Image"
           src="/assets/images/image-2024-11-21t03-37-11-483z-2@2x.png"
         />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="relative max-w-7xl mx-auto px-6 md:px-0">
           {/* Top Section */}
           <div className="relative flex flex-col lg:flex-row items-start lg:items-center gap-8">
             {/* Text Content */}

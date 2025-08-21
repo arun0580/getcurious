@@ -16,7 +16,7 @@ export default function Footer() {
         backgroundPosition: "left -100px bottom",
       }}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 py-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-10 px-6 md:px-0">
         {/* Logo Section */}
         <div className="flex justify-center md:justify-end order-1 md:order-2">
           <img
@@ -156,6 +156,28 @@ export default function Footer() {
               DONATE NOW
             </a>
           </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-1 px-6 md:px-0">
+        {/* Left Side */}
+        <div className="flex justify-start order-2 md:order-1 text-white font-body-text-large">
+          ©{new Date().getFullYear()} Get Curious Together. All Rights Reserved
+        </div>
+
+        {/* Right Side */}
+        <div className="flex justify-start md:justify-end space-x-6 order-1 md:order-2">
+          <a
+            href="#"
+            className="hover:text-lime-400 text-white font-body-text-large"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="#"
+            className="hover:text-lime-400 text-white font-body-text-large"
+          >
+            Terms of Service
+          </a>
         </div>
       </div>
     </footer>
