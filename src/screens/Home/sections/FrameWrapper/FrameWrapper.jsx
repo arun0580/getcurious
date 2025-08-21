@@ -26,7 +26,7 @@ export const FrameWrapper = () => {
         </p>
 
         <Button
-          className="!bg-orange-500 self-start"
+          className="!bg-orange-500 self-start hover-lime-400 cursor-pointer"
           property1="default"
           text="Learn How to Sponsor Your Community"
         />
