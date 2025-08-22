@@ -3,10 +3,11 @@ import { Button } from "../Button";
 import { MenuItem } from "../MenuItem";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const NavBarWrapper = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // get current route
 
   const menuItems = [
     { text: "About Us", path: "/about" },
@@ -30,11 +31,17 @@ export const NavBarWrapper = ({ className }) => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center gap-2 lg:gap-10 cursor-pointer">
-        {menuItems.map((item, idx) => (
-          <Link key={idx} to={item.path}>
-            <MenuItem property1="default" text={item.text} />
-          </Link>
-        ))}
+        {menuItems.map((item, idx) => {
+          const isActive = location.pathname === item.path;
+          return (
+            <Link key={idx} to={item.path}>
+              <MenuItem
+                property1={isActive ? "active" : "default"}
+                text={item.text}
+              />
+            </Link>
+          );
+        })}
         <Link to="/join">
           <Button property1="default" text="Join the Movement" />
         </Link>
@@ -60,11 +67,17 @@ export const NavBarWrapper = ({ className }) => {
             exit={{ opacity: 0, y: -10 }}
             className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-3 md:hidden z-50"
           >
-            {menuItems.map((item, idx) => (
-              <Link key={idx} to={item.path} onClick={() => setIsOpen(false)}>
-                <MenuItem property1="default" text={item.text} />
-              </Link>
-            ))}
+            {menuItems.map((item, idx) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link key={idx} to={item.path} onClick={() => setIsOpen(false)}>
+                  <MenuItem
+                    property1={isActive ? "active" : "default"}
+                    text={item.text}
+                  />
+                </Link>
+              );
+            })}
             <Link to="/join" onClick={() => setIsOpen(false)}>
               <Button property1="default" text="Join the Movement" />
             </Link>

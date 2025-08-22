@@ -63,7 +63,7 @@ export const SomethingWrapper = () => {
       {/* Buttons Section */}
       <div className="w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-center">
         <Button
-          className="!flex-[0_0_auto] !px-6 md:!px-8 !py-3 md:!py-4 !bg-orange-500"
+          className="!flex-[0_0_auto] !px-6 md:!px-8 !py-3 md:!py-4 !bg-orange-500  cursor-pointer"
           joinTheMovementClassName="!text-center"
           property1="default"
           text={
@@ -75,7 +75,7 @@ export const SomethingWrapper = () => {
           }
         />
         <Button
-          className="!flex-[0_0_auto] !px-6 md:!px-8 !py-3 md:!py-4 !bg-orange-500"
+          className="!flex-[0_0_auto] !px-6 md:!px-8 !py-3 md:!py-4 !bg-orange-500  cursor-pointer"
           joinTheMovementClassName="!text-center"
           property1="default"
           text={
