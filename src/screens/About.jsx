@@ -89,7 +89,7 @@ export const About = () => {
               </p>
 
               <Button
-                className="!px-6 sm:!px-8 !py-3 sm:!py-4 text-sm sm:text-base cursor-pointer"
+                className="!px-6 sm:!px-8 !py-3 sm:!py-4 text-sm sm:text-base cursor-pointer w-full md:w-[300px]"
                 property1="default"
                 text="Download the OER Article"
               />

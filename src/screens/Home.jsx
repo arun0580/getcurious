@@ -33,8 +33,12 @@ export const Home = () => {
 
             <Frame />
 
-            <div className="pt-4 cursor-pointer">
-              <Button property1="default" text="Learn More" />
+            <div className="pt-4 cursor-pointer w-full md:w-[300px]">
+              <Button
+                property1="default"
+                text="Learn More"
+                className="w-full"
+              />
             </div>
           </div>
 
