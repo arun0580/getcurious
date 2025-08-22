@@ -11,7 +11,7 @@ export const Discover = () => {
       </h2>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto relative px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto relative px-6 md:px-12 ">
         {/* Card 1 */}
         <div className="bg-white rounded-[30px] md:rounded-[50px] shadow-[0px_4px_25px_#00000026] p-8 flex flex-col items-start">
           <img

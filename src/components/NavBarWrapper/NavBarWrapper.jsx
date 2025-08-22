@@ -16,7 +16,7 @@ export const NavBarWrapper = ({ className }) => {
 
   return (
     <nav
-      className={`relative max-w-7xl mx-auto flex items-center justify-between py-4 px-6 ${className}`}
+      className={`relative max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-12 ${className}`}
     >
       {/* Logo */}
       <img

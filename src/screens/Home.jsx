@@ -14,7 +14,7 @@ export const Home = () => {
       {/* Hero Section */}
 
       <section className="relative w-full bg-[url('/assets/images/adobestock-280662181-1.png')] bg-cover bg-center py-16 md:py-24">
-        <div className=" relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
+        <div className=" relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 md:px-12 ">
           {/* Left Content */}
           <div className="space-y-6 text-center md:text-left">
             <div className="[font-family:'Anton',Helvetica] font-normal leading-[normal]">
@@ -74,9 +74,9 @@ export const Home = () => {
       </section>
 
       <Discover />
-      <div className="relative max-w-7xl w-full mx-auto px-0 md:px-6">
+      <div className="relative max-w-7xl w-full mx-auto px-0 md:px-12">
         <div className="relative max-w-7xl mx-auto bg-[url('/assets/images/image.png')] bg-cover bg-center py-12 rounded-2xl h-auto lg:h-[500px]">
-          <div className="relative max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center gap-6 lg:mt-20 px-6 ">
+          <div className="relative max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center gap-6 lg:mt-20 px-6 md:px-12  ">
             {/* Left side text + bg box */}
             <div className="relative flex-1 text-center lg:text-left">
               <div className="absolute inset-0" />
@@ -118,7 +118,7 @@ export const Home = () => {
           src="/assets/images/circle-v3-1@2x.png"
         />
 
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 ">
           {/* Top Section */}
           <div className="relative flex flex-col lg:flex-row items-start lg:items-center gap-8">
             {/* Text Content */}

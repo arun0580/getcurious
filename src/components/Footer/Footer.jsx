@@ -16,7 +16,7 @@ export default function Footer() {
         backgroundPosition: "left -100px bottom",
       }}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-10 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-10 px-6 md:px-12 ">
         {/* Logo Section */}
         <div className="flex justify-center md:justify-end order-1 md:order-2">
           <img
@@ -45,39 +45,41 @@ export default function Footer() {
       </div>
 
       <div className="text-white py-12 relative ">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 px-6 md:px-12">
           {/* Quote Section */}
           <div className="text-white p-6 rounded-xl max-w-md relative">
-            <span class="absolute left-[0px] top-[18px] text-[160px] leading-[0]">
+            <span className="absolute left-[0px] top-[18px] text-[160px] leading-[0]">
               “
             </span>
 
             <p className="text-2xl font-bold mb-2 tracking-wide font-hand">
               CURIOSITY
             </p>
-            <p className="text-xl leading-relaxed font-hand">
+            <p className="text-2xl leading-relaxed font-hand">
               Is one of <br />
               The great secrets <br />
               of happiness.
             </p>
 
-            <p className="mt-4 italic font-casual text-lg">~ Bryant McGill</p>
+            <p className="mt-4 italic font-casual text-lg text-xl text-center">
+              ~ Bryant McGill
+            </p>
 
-            <span class="absolute text-[160px] right-[90px] bottom-[60px]  leading-[0]">
+            <span className="absolute text-[160px] right-[90px] bottom-[60px] leading-[0]">
               ”
             </span>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="mb-3 border-b border-white pb-1 text-xl  [font-family:'Anton',Helvetica]">
+          <div className="flex flex-col">
+            <h3 className="mb-3 border-b border-white pb-1 text-2xl [font-family:'Anton',Helvetica]">
               QUICK LINKS
             </h3>
             <ul className="space-y-2">
               <li>
                 <a
                   href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large"
+                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
                 >
                   Home
                 </a>
@@ -85,7 +87,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large"
+                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
                 >
                   About Us
                 </a>
@@ -93,7 +95,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large"
+                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
                 >
                   Your Community
                 </a>
@@ -101,7 +103,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large"
+                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
                 >
                   K12 Education
                 </a>
@@ -109,7 +111,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large"
+                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
                 >
                   Contact Us
                 </a>
@@ -117,9 +119,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social & Donate */}
-          <div>
-            <h3 className="mb-3 border-b border-white pb-1 text-xl  [font-family:'Anton',Helvetica]">
+          {/* Follow Us */}
+          <div className="flex flex-col items-start">
+            {" "}
+            {/* 👈 align this column to the right */}
+            <h3 className="mb-3 border-b border-white pb-1 text-2xl [font-family:'Anton',Helvetica]">
               FOLLOW US
             </h3>
             <div className="flex gap-4 text-2xl mb-4">
@@ -141,7 +145,6 @@ export default function Footer() {
               >
                 <SiX className="text-lg" />
               </a>
-
               <a
                 href="#"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-gray-500 hover:text-lime-400 transition-colors"
@@ -151,14 +154,14 @@ export default function Footer() {
             </div>
             <a
               href="#"
-              className="mt-5 inline-block bg-orange-500 text-white text-xl px-20 py-3 rounded-full shadow-md hover:bg-orange-600 transition [font-family:'Anton',Helvetica]"
+              className="w-full text-center mt-5 inline-block bg-orange-500 text-white text-xl px-20 py-3 rounded-full shadow-md hover:bg-orange-600 transition [font-family:'Anton',Helvetica]"
             >
               DONATE NOW
             </a>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-1 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 py-1 px-6 md:px-12 ">
         {/* Left Side */}
         <div className="flex justify-start order-2 md:order-1 text-white font-body-text-large">
           ©{new Date().getFullYear()} Get Curious Together. All Rights Reserved
