@@ -74,7 +74,7 @@ export const About = () => {
           <img
             className="relative w-[389px] h-[416px] aspect-[0.93] object-cover"
             alt="Image"
-            src="https://c.animaapp.com/8arTQwxz/img/image-28@2x.png"
+            src="/assets/images/image-28@2x.png"
           />
 
           {/* Text + Button */}
@@ -105,10 +105,10 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full bg-[url('https://c.animaapp.com/8arTQwxz/img/green-bar.png')] bg-no-repeat bg-top bg-[length:100%_auto] py-20 mt-20">
+      <div className="relative w-full bg-[url('/assets/images/green-bar.png')] bg-no-repeat bg-top bg-[length:100%_auto] py-20 mt-20">
         <SomethingWrapper />
       </div>
-      <div className="relative w-full bg-[url(https://c.animaapp.com/8arTQwxz/img/adobestock-946446396-1.png)] bg-cover bg-[50%_50%] mt-10 py-10">
+      <div className="relative w-full bg-[url(/assets/images/adobestock-946446396-1.png)] bg-cover bg-[50%_50%] mt-10 py-10">
         <DivWrapper />
       </div>
     </div>

@@ -34,7 +34,7 @@ let urls = new Set();
 
 filesToScan.forEach((file) => {
   const content = fs.readFileSync(file, "utf-8");
-  const regex = /https:\/\/c\.animaapp\.com\/11hWkBJI\/img\/[^\s"')]+/g;
+  const regex = /https:\/\/c\.animaapp\.com\/8arTQwxz\/img\/[^\s"')]+/g;
   const matches = content.match(regex);
   if (matches) {
     matches.forEach((m) => urls.add(m));

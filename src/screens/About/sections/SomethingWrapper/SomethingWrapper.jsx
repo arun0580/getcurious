@@ -16,7 +16,7 @@ export const SomethingWrapper = () => {
           <img
             className="w-full max-w-[318px] aspect-[0.81] object-cover"
             alt="Image"
-            src="https://c.animaapp.com/8arTQwxz/img/image-32@2x.png"
+            src="/assets/images/image-32@2x.png"
           />
           <p className="font-body-text-large text-[#343434] text-base md:text-[length:var(--body-text-large-font-size)] text-center leading-relaxed md:leading-[var(--body-text-large-line-height)]">
             Families
@@ -32,7 +32,7 @@ export const SomethingWrapper = () => {
           <img
             className="w-full max-w-[318px] aspect-[0.81] object-cover"
             alt="Image"
-            src="https://c.animaapp.com/8arTQwxz/img/image-31@2x.png"
+            src="/assets/images/image-31@2x.png"
           />
           <p className="font-body-text-large text-[#343434] text-base md:text-[length:var(--body-text-large-font-size)] text-center leading-relaxed md:leading-[var(--body-text-large-line-height)]">
             Student-Led Learning
@@ -48,7 +48,7 @@ export const SomethingWrapper = () => {
           <img
             className="w-full max-w-[318px] aspect-[0.82] object-cover"
             alt="Image"
-            src="https://c.animaapp.com/8arTQwxz/img/image-30@2x.png"
+            src="/assets/images/image-30@2x.png"
           />
           <p className="font-body-text-large text-[#343434] text-base md:text-[length:var(--body-text-large-font-size)] text-center leading-relaxed md:leading-[var(--body-text-large-line-height)]">
             Educators
