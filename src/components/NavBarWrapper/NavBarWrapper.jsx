@@ -3,15 +3,16 @@ import { Button } from "../Button";
 import { MenuItem } from "../MenuItem";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const NavBarWrapper = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { text: "About Us" },
-    { text: "Your Community" },
-    { text: "K12 Education" },
-    { text: "Contact" },
+    { text: "About Us", path: "/about" },
+    { text: "Your Community", path: "/community" },
+    { text: "K12 Education", path: "/education" },
+    { text: "Contact", path: "/contact" },
   ];
 
   return (
@@ -19,18 +20,24 @@ export const NavBarWrapper = ({ className }) => {
       className={`relative max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-12 ${className}`}
     >
       {/* Logo */}
-      <img
-        className="h-[60px] w-auto object-contain cursor-pointer"
-        alt="Logo"
-        src="/assets/images/logo.png"
-      />
+      <Link to="/">
+        <img
+          className="h-[60px] w-auto object-contain cursor-pointer"
+          alt="Logo"
+          src="/assets/images/logo.png"
+        />
+      </Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center gap-2 lg:gap-10 cursor-pointer">
         {menuItems.map((item, idx) => (
-          <MenuItem key={idx} property1="default" text={item.text} />
+          <Link key={idx} to={item.path}>
+            <MenuItem property1="default" text={item.text} />
+          </Link>
         ))}
-        <Button property1="default" text="Join the Movement" />
+        <Link to="/join">
+          <Button property1="default" text="Join the Movement" />
+        </Link>
       </div>
 
       {/* Mobile Hamburger */}
@@ -51,12 +58,16 @@ export const NavBarWrapper = ({ className }) => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute cursor-pointer top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-3 md:hidden z-50"
+            className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-3 md:hidden z-50"
           >
             {menuItems.map((item, idx) => (
-              <MenuItem key={idx} property1="default" text={item.text} />
+              <Link key={idx} to={item.path} onClick={() => setIsOpen(false)}>
+                <MenuItem property1="default" text={item.text} />
+              </Link>
             ))}
-            <Button property1="default" text="Join the Movement" />
+            <Link to="/join" onClick={() => setIsOpen(false)}>
+              <Button property1="default" text="Join the Movement" />
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

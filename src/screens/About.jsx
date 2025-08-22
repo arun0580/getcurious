@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "../components/Button";
+import Footer from "../components/Footer/Footer";
 import { Discover } from "./Home/sections/Discover";
 import { Frame } from "./Home/sections/Frame";
 import { FrameWrapper } from "./Home/sections/FrameWrapper";
 
-export const Home = () => {
+export const About = () => {
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Hero Section */}
@@ -20,7 +21,9 @@ export const Home = () => {
                 src="/assets/images/mask-group-3@2x.png"
               />
 
-              <span className="text-orange-500 text-[32px] block">GET</span>
+              <span className="text-orange-500 text-[32px] block">
+                GET:ABOUT US
+              </span>
               <span className="text-[#1e1e1e] text-[80px] block">
                 CURIOUS TOGETHER
               </span>
@@ -150,6 +153,7 @@ export const Home = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

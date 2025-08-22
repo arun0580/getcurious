@@ -1,4 +1,20 @@
 {
-  "nodes": [],
+  "nodes": [
+    {
+      "id": "src/screens/Home.jsx",
+      "label": "Home",
+      "routes": [
+        "/"
+      ],
+      "isRoot": true
+    },
+    {
+      "id": "src/screens/About.jsx",
+      "label": "About",
+      "routes": [
+        "/about"
+      ]
+    }
+  ],
   "edges": []
 }
