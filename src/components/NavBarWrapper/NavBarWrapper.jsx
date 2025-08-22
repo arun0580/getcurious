@@ -30,18 +30,12 @@ export const NavBarWrapper = ({ className }) => {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center gap-2 lg:gap-10 cursor-pointer">
-        {menuItems.map((item, idx) => {
-          const isActive = location.pathname === item.path;
-          return (
-            <Link key={idx} to={item.path}>
-              <MenuItem
-                property1={isActive ? "active" : "default"}
-                text={item.text}
-              />
-            </Link>
-          );
-        })}
+      <div className="hidden md:flex items-center gap-2 lg:gap-10">
+        {menuItems.map((item, idx) => (
+          <Link key={idx} to={item.path}>
+            <MenuItem property1="default" text={item.text} path={item.path} />
+          </Link>
+        ))}
         <Link to="/join">
           <Button property1="default" text="Join the Movement" />
         </Link>

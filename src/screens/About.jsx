@@ -42,17 +42,11 @@ export const About = () => {
               </ul>
             </div>
 
-            <div className="pt-4 cursor-pointer w-[300px]">
+            <div className="pt-4 cursor-pointer w-full md:w-[400px]">
               <Button
                 property1="default"
                 className="w-full  cursor-pointer"
-                text={
-                  <>
-                    Access to Resources is Free
-                    <br />
-                    Sign Up Now!
-                  </>
-                }
+                text={<>Access to Resources is Free. Sign Up Now!</>}
               />
             </div>
           </div>
