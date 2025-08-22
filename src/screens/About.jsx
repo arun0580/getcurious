@@ -1,159 +1,116 @@
 import React from "react";
 import { Button } from "../components/Button";
 import Footer from "../components/Footer/Footer";
-import { Discover } from "./Home/sections/Discover";
+import { DivWrapper } from "./About/sections/DivWrapper";
 import { Frame } from "./Home/sections/Frame";
-import { FrameWrapper } from "./Home/sections/FrameWrapper";
+import { SomethingWrapper } from "./About/sections/SomethingWrapper";
 
 export const About = () => {
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Hero Section */}
 
-      <section className="relative w-full bg-[url('/assets/images/adobestock-280662181-1.png')] bg-cover bg-center py-16 md:py-24">
-        <div className=" relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 md:px-12 ">
+      <section className="relative w-full bg-white py-16 md:py-24">
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4 md:px-12">
           {/* Left Content */}
-          <div className="space-y-6 text-center md:text-left">
-            <div className="[font-family:'Anton',Helvetica] font-normal leading-[normal]">
-              <img
-                className="absolute w-[40vw] max-w-[343px] h-auto top-[-30px] left-[25%]"
-                alt="Mask group"
-                src="/assets/images/mask-group-3@2x.png"
-              />
+          <div className="gap-7 self-stretch w-full flex flex-col items-start relative">
+            <p className="font-h3-semi-bold text-[#ffac00] text-[length:var(--h3-semi-bold-font-size)] tracking-[var(--h3-semi-bold-letter-spacing)] leading-[var(--h3-semi-bold-line-height)] [font-style:var(--h3-semi-bold-font-style)]">
+              Our vision is to create a world where every child&#39;s mind and
+              heart is opened to the transformative power of learning.
+            </p>
 
-              <span className="text-orange-500 text-[32px] block">
-                GET:ABOUT US
-              </span>
-              <span className="text-[#1e1e1e] text-[80px] block">
-                CURIOUS TOGETHER
-              </span>
-              <img
-                className="absolute w-[30vw] max-w-[275px] h-auto top-[33%] left-[24%] -translate-x-1/2"
-                alt="Vector"
-                src="/assets/images/vector-22.svg"
-              />
+            <div className="flex flex-col gap-3">
+              {/* Bullet List */}
+              <ul className="list-disc pl-6">
+                <li className="[font-family:'Jost',Helvetica] font-normal text-[#3e3e3e] text-2xl leading-9">
+                  Education is about more than acquiring knowledge; it fosters
+                  curiosity, empathy, and a lifelong love for learning.
+                </li>
+                <li className="[font-family:'Jost',Helvetica] font-normal text-[#3e3e3e] text-2xl leading-9">
+                  We aim to ignite curiosity and nurture empathy within each
+                  child, empowering them to explore the world with open minds
+                  and compassionate hearts.
+                </li>
+                <li className="[font-family:'Jost',Helvetica] font-normal text-[#3e3e3e] text-2xl leading-9">
+                  Our goal is to unlock the full potential of every child,
+                  helping them thrive in an ever-changing world.
+                </li>
+                <li className="[font-family:'Jost',Helvetica] font-normal text-[#3e3e3e] text-2xl leading-9">
+                  Our vision focuses on both academic growth and personal,
+                  emotional development.
+                </li>
+              </ul>
             </div>
 
-            <Frame />
-
-            <div className="pt-4 cursor-pointer">
-              <Button property1="default" text="Learn More" />
+            <div className="pt-4 cursor-pointer w-[300px]">
+              <Button
+                property1="default"
+                className="w-full"
+                text={
+                  <>
+                    Access to Resources is Free
+                    <br />
+                    Sign Up Now!
+                  </>
+                }
+              />
             </div>
           </div>
 
-          {/* Right Side Images */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* Right Side Image */}
+          <div className="flex justify-center">
             <img
-              className="absolute w-[156px] h-[124px] top-[-80px] right-[-4%] object-cover"
-              alt="Image"
-              src="/assets/images/image-2024-11-21t03-37-18-070z-1@2x.png"
-            />
-            <img
-              src="/assets/images/idea-1@2x.png"
-              alt="Lightbulb Idea"
-              className="w-full h-auto rounded-tl-[100px] object-cover"
-            />
-            <img
-              src="/assets/images/saturday-1@2x.png"
-              alt="Small Business"
-              className="w-full h-auto rounded-tr-[100px] object-cover"
-            />
-            <img
-              src="/assets/images/dog-1@2x.png"
-              alt="Dog Walking"
-              className="w-full h-auto rounded-bl-[100px] object-cover"
-            />
-            <img
-              src="/assets/images/group-1413371869@2x.png"
-              alt="Kids with Science Project"
-              className="w-full h-auto rounded-br-[100px] object-cover"
+              className="w-full max-w-[499px] h-auto object-contain rounded-[20px]"
+              alt="Childpic"
+              src="/assets/images/childpic 1.png"
             />
           </div>
         </div>
       </section>
 
-      <Discover />
-      <div className="relative max-w-7xl w-full mx-auto px-0 md:px-12">
-        <div className="relative max-w-7xl mx-auto bg-[url('/assets/images/image.png')] bg-cover bg-center py-12 rounded-2xl h-auto lg:h-[500px]">
-          <div className="relative max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center gap-6 lg:mt-20 px-6 md:px-12  ">
-            {/* Left side text + bg box */}
-            <div className="relative flex-1 text-center lg:text-left">
-              <div className="absolute inset-0" />
-            </div>
+      <div className="relative max-w-7xl w-full mx-auto px-4 md:px-12">
+        <div className="flex flex-col md:flex-row w-full items-center md:items-start justify-between gap-10">
+          {/* Image */}
+          <img
+            className="relative w-[389px] h-[416px] aspect-[0.93] object-cover"
+            alt="Image"
+            src="https://c.animaapp.com/8arTQwxz/img/image-28@2x.png"
+          />
 
-            <p className="relative  bg-black/40 rounded-2xl [font-family:'Anton',Helvetica] font-normal text-white text-[64px] text-center tracking-[0] leading-snug py-10 px-10">
-              YOU ARE YOUR COMMUNITY,
-              <br />
-              YOUR COMMUNITY IS YOU!
+          {/* Text + Button */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16">
+            {/* Paragraph */}
+            <p className="relative w-full md:w-[391px] font-body-text-large font-[number:var(--body-text-large-font-weight)] text-[#343434] text-[length:var(--body-text-large-font-size)] tracking-[var(--body-text-large-letter-spacing)] leading-[var(--body-text-large-line-height)] [font-style:var(--body-text-large-font-style)] text-center md:text-left">
+              The Internet is exploding with thousands of high quality free
+              &amp; open educational resources (OERS). We harness the power of
+              OERS to inspire curiosity in K–12 learning by making the best open
+              educational resources (OERs) easy to find, trust, and use—curated,
+              vetted, and ready to spark discovery.
             </p>
 
-            {/* Right side image */}
-            <div className="flex-1 flex justify-center lg:justify-end"></div>
-          </div>
-          <img
-            className="absolute top-[100px] right-[-5px] w-40 md:w-56 h-auto"
-            alt="Group"
-            src="/assets/images/group-1413371873@2x.png"
-          />
-          <img
-            className="absolute bottom-[-20px]  left-[-12px] mt-6 w-32 md:w-48 h-auto mx-auto lg:mx-0"
-            alt="Group"
-            src="/assets/images/group-1413371874@2x.png"
-          />
-        </div>
-        <img
-          className="absolute w-28 h-72 lg:w-40 lg:h-[379px] object-cover right-0"
-          alt="Circle"
-          src="/assets/images/circle-v2-1@2x.png"
-        />
-      </div>
-      <FrameWrapper />
-
-      <div className="relative w-full bg-white py-16">
-        {/* Left Decorative Circle */}
-        <img
-          className="absolute w-24 h-72 lg:w-36 lg:h-[464px] object-cover"
-          alt="Circle"
-          src="/assets/images/circle-v3-1@2x.png"
-        />
-
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 ">
-          {/* Top Section */}
-          <div className="relative flex flex-col lg:flex-row items-start lg:items-center gap-8">
-            {/* Text Content */}
-            <div className="flex-1">
-              <h2 className="font-anton text-orange-500 text-2xl md:text-3xl lg:text-4xl mb-6 [font-family:'Anton',Helvetica] font-normal text-orange-500 text-4xl tracking-[0] leading-[normal]">
-                Build Civic Engagement
-              </h2>
-              <p className="font-body-text-large text-black text-base md:text-xl lg:text-2xl leading-relaxed py-4">
-                Get Curious Together brings together the people, places,
-                history, and events that make your community unique—all in one
-                easy-to-use platform.
+            {/* Right Column */}
+            <div className="flex flex-col w-full md:w-[393px] items-center md:items-end gap-6">
+              <p className="relative self-stretch mt-[-1.00px] font-display-font-2-semi-bold font-[number:var(--display-font-2-semi-bold-font-weight)] text-[#ffa500] text-[length:var(--display-font-2-semi-bold-font-size)] text-center md:text-right tracking-[var(--display-font-2-semi-bold-letter-spacing)] leading-[var(--display-font-2-semi-bold-line-height)] [font-style:var(--display-font-2-semi-bold-font-style)]">
+                FREE &amp; OPEN EDUCATIONAL RESOURCES (OERS)
                 <br />
-                <br />
-                Hear from the mayor and local leaders through interactive
-                widgets, and help students, families, and neighbors connect,
-                engage, and grow a stronger, more caring community.
+                PLAY A KEY ROLE!
               </p>
+
+              <Button
+                className="!flex-[0_0_auto] !px-8 !py-4"
+                property1="default"
+                text="Download the OER Article"
+              />
             </div>
-            <img
-              className=" absolute w-32 h-40 lg:w-44 lg:h-[195px] object-cover mt-6 lg:mt-0 right-0 right-[-30%] bottom-[-29%]"
-              alt="Image"
-              src="/assets/images/image-2024-11-21t03-37-11-483z-2@2x.png"
-            />
           </div>
-
-          {/* Bottom Section */}
-
-          {/* Background image (full width under content) */}
-          <img
-            className="absolute bottom-0 left-0 w-full h-64 md:h-[400px] lg:h-[668px] object-cover -z-10"
-            alt="Background"
-            src="/assets/images/image-1.png"
-          />
         </div>
       </div>
-      <Footer />
+      <div className="relative w-full bg-[url('https://c.animaapp.com/8arTQwxz/img/green-bar.png')] bg-no-repeat bg-top bg-[length:100%_auto] py-20 mt-20">
+        <SomethingWrapper />
+      </div>
+      <div className="relative w-full bg-[url(https://c.animaapp.com/8arTQwxz/img/adobestock-946446396-1.png)] bg-cover bg-[50%_50%] mt-10 py-10">
+        <DivWrapper />
+      </div>
     </div>
   );
 };
