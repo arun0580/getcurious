@@ -13,7 +13,7 @@ export const About = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4 md:px-12">
           {/* Left Content */}
-          <div className="gap-7 self-stretch w-full flex flex-col items-start relative">
+          <div className="gap-7 self-stretch w-full flex flex-col items-start relative order-2 md:order-1">
             <p className="font-h3-semi-bold text-[#ffac00] text-[length:var(--h3-semi-bold-font-size)] tracking-[var(--h3-semi-bold-letter-spacing)] leading-[var(--h3-semi-bold-line-height)] [font-style:var(--h3-semi-bold-font-style)]">
               Our vision is to create a world where every child&#39;s mind and
               heart is opened to the transformative power of learning.
@@ -52,7 +52,7 @@ export const About = () => {
           </div>
 
           {/* Right Side Image */}
-          <div className="flex justify-center">
+          <div className="flex justify-center order-1 md:order-2">
             <img
               className="w-full max-w-[499px] h-auto object-contain rounded-[20px]"
               alt="Childpic"
