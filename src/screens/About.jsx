@@ -1,8 +1,6 @@
 import React from "react";
 import { Button } from "../components/Button";
-import Footer from "../components/Footer/Footer";
 import { DivWrapper } from "./About/sections/DivWrapper";
-import { Frame } from "./Home/sections/Frame";
 import { SomethingWrapper } from "./About/sections/SomethingWrapper";
 
 export const About = () => {

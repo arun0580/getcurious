@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "../components/Button";
-import Footer from "../components/Footer/Footer";
 
 export const Community = () => {
   const communityLocations = [

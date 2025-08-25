@@ -27,7 +27,7 @@ export const Button = ({
         dispatch("mouse_enter");
       }}
     >
-      <div className="font-h6-medium w-fit mt-[-1.00px] tracking-[var(--h6-medium-letter-spacing)] text-[length:var(--h6-medium-font-size)] [font-style:var(--h6-medium-font-style)] text-white font-[number:var(--h6-medium-font-weight)] leading-[var(--h6-medium-line-height)] relative">
+      <div className="font-h6-medium w-fit mt-[-1.00px] tracking-wide text-[length:var(--h6-medium-font-size)] [font-style:var(--h6-medium-font-style)] text-white font-[number:var(--h6-medium-font-weight)] leading-[var(--h6-medium-line-height)] relative">
         {text}
       </div>
     </button>

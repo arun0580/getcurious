@@ -12,7 +12,7 @@ export const NavBarWrapper = ({ className }) => {
   const menuItems = [
     { text: "About Us", path: "/about" },
     { text: "Your Community", path: "/community" },
-    { text: "K12 Education", path: "/education" },
+    // { text: "K12 Education", path: "/education" },
     { text: "Contact", path: "/contact" },
   ];
 

@@ -8,6 +8,14 @@ import {
 
 import { SiX } from "react-icons/si";
 export default function Footer() {
+  const menuItems = [
+    { text: "Home", path: "/" },
+    { text: "About Us", path: "/about" },
+    { text: "Your Community", path: "/community" },
+    // { text: "K12 Education", path: "/education" },
+    { text: "Contact", path: "/contact" },
+  ];
+
   return (
     <footer
       className="bg-[rgb(88,88,87)] text-white py-8 relative bg-no-repeat bg-contain"
@@ -76,46 +84,16 @@ export default function Footer() {
               QUICK LINKS
             </h3>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
-                >
-                  Your Community
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
-                >
-                  K12 Education
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-lime-400 text-white font-body-text-large text-xl"
-                >
-                  Contact Us
-                </a>
-              </li>
+              {menuItems.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.path}
+                    className="hover:text-lime-400 text-white font-body-text-large text-xl"
+                  >
+                    {item.text}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
