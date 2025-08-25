@@ -100,7 +100,7 @@ export const Community = () => {
   ];
 
   return (
-    <section className="relative w-full bg-white py-16 md:py-24 overflow-hidden">
+    <section className="relative w-full bg-white py-16 md:py-24 pb-0 md:pb-0 overflow-hidden">
       {/* Hero Section */}
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4 md:px-12">
         {/* Left Column */}
@@ -153,7 +153,6 @@ export const Community = () => {
           />
         </div>
       </div>
-
       {/* Background full width */}
       <div className="relative w-full mt-10 md:mt-20">
         <img
@@ -162,16 +161,16 @@ export const Community = () => {
           className="w-full h-auto object-cover"
         />
       </div>
-
       {/* Civic Engagement Section */}
       <section className="w-full bg-[#ffa5000a] py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <header className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="font-h3-semi-bold font-[number:var(--h3-semi-bold-font-weight)] text-[#222] text-2xl md:text-4xl leading-snug">
+            <h2 className="font-h3-semi-bold font-[number:var(--h3-semi-bold-font-weight)] text-[#222] text-2xl md:text-4xl leading-[32px] md:leading-[44px] lg:leading-[60px]">
               COMMUNITY & CIVIC ENGAGEMENT
               <br />
-              Curious about "What's going on?" to "How can we make it better!"
+              Curious about "What's going on?" to <br />
+              "How can we make it better!"
             </h2>
 
             <p className="[font-family:'Jost',Helvetica] font-normal text-[#565656] text-lg md:text-2xl leading-relaxed">
@@ -207,7 +206,7 @@ export const Community = () => {
             Community News
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 ">
             {communityNews.map((news) => (
               <article
                 key={news.id}
@@ -225,8 +224,23 @@ export const Community = () => {
                   </p>
                   <div className="flex items-center justify-between text-sm text-gray-700">
                     <div className="flex gap-4">
-                      <span>{news.likes} Likes</span>
-                      <span>{news.comments} Comments</span>
+                      <span className="font-body-text-regular flex items-center">
+                        <img
+                          className="relative w-5 h-5 me-1"
+                          alt="Like icon"
+                          src="https://c.animaapp.com/zIBKH2hr/img/frame-7.svg"
+                        />
+                        {news.likes} Likes
+                      </span>
+
+                      <span className="font-body-text-regular flex items-center">
+                        <img
+                          className="relative w-5 h-5 me-1"
+                          alt="Comment icon"
+                          src="https://c.animaapp.com/zIBKH2hr/img/frame-8.svg"
+                        />
+                        {news.comments} Comments
+                      </span>
                     </div>
                     <img
                       className="w-6 h-6"
@@ -255,7 +269,7 @@ export const Community = () => {
           </div>
         </div>
       </section>
-      <section className="w-full bg-[#fff] py-12 px-6">
+      <section className="w-full bg-[#fff] py-12 px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side */}
           <div className="space-y-6">
@@ -264,7 +278,7 @@ export const Community = () => {
             </h3>
 
             {/* Hot Spots header */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between pb-5">
               <div className="flex items-center gap-2 text-[#98bb3c] font-h5-medium text-lg">
                 <img
                   src="https://c.animaapp.com/zIBKH2hr/img/marker-pin-04.svg"
@@ -273,7 +287,7 @@ export const Community = () => {
                 />
                 Hot Spots - Geography
               </div>
-              <div className="flex items-center gap-1 text-[#98bb3c] font-medium underline cursor-pointer">
+              <div className="flex items-center gap-1 text-[#98bb3c] font-medium underline  font-body-text-large text-lg cursor-pointer">
                 View all
                 <img
                   src="https://c.animaapp.com/zIBKH2hr/img/arrow-right.svg"
@@ -284,20 +298,20 @@ export const Community = () => {
             </div>
 
             {/* Categories */}
-            <div className="grid grid-cols-3 sm:grid-cols-5 gap-6 pt-4 pb-10">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-6 pt-4 pb-12">
               {hotSpotCategories.map((category) => (
                 <div
                   key={category.id}
                   className="flex flex-col items-center gap-2"
                 >
-                  <div className="w-[90px] h-[90px] flex items-center justify-center rounded-full border-2 border-[#98bb3c] bg-white relative">
+                  <div className="w-[90px] h-[90px] flex items-center justify-center rounded-full border-2 border-[#98bb3c] bg-white relative p-5">
                     <img
                       src={category.icon}
                       alt={category.name}
-                      className="w-10 h-10"
+                      className="w-15 h-15"
                     />
                   </div>
-                  <p className="text-sm text-[#222] font-fredoka text-center">
+                  <p className="text-sm text-[#222] font-body-text-large text-lg text-center">
                     {category.name}
                   </p>
                 </div>
@@ -314,11 +328,11 @@ export const Community = () => {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
             <div className="flex-1 flex items-center w-full">
               {/* Left-aligned image */}
-              <div className="flex justify-start w-[200px]">
+              <div className="flex justify-center w-[200px]">
                 <img
                   src="https://c.animaapp.com/zIBKH2hr/img/frame.svg"
                   alt="Community Streaks Icon"
-                  className="w-24 h-24"
+                  className="w-14 h-24"
                 />
               </div>
 
@@ -336,7 +350,7 @@ export const Community = () => {
               COMMUNITY STREAKS!
             </h4>
 
-            <p className="text-[#565656] font-body-normal pb-10">
+            <p className="text-[#565656] font-body-text-large text-xl pb-10 text-center">
               Earn a streak every time you invite a friend, ask a question, use
               a resource and be entered to win weekly community drawings!
             </p>
@@ -346,6 +360,30 @@ export const Community = () => {
               src="https://c.animaapp.com/zIBKH2hr/img/line-3.svg"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Background full width */}
+      <div className="relative w-full mt-10 md:mt-20">
+        <img
+          src="assets/images/AdobeStock_157478294_Preview 1.png"
+          alt="Background"
+          className="w-full h-auto object-cover"
+        />
+      </div>
+      {/* Call to Action Section */}
+      <section className="w-full items-start gap-2.5 px-6 md:px-12 lg:px-[166px] py-10 md:py-[70px] bg-[#1d270c]">
+        <div className="max-w-7xl mx-auto flex flex-col gap-8 md:gap-12 items-center py-10 md:py-[70px]">
+          <h2 className="w-full relative self-stretch mt-[-1.00px] font-display-font-1-semi-bold text-[#ffa500] text-xl sm:text-2xl md:text-[length:var(--display-font-1-semi-bold-font-size)] leading-normal md:leading-snug font-[number:var(--display-font-1-semi-bold-font-weight)] text-center tracking-[var(--display-font-1-semi-bold-letter-spacing)] [font-style:var(--display-font-1-semi-bold-font-style)]">
+            JOIN US IN BEING CURIOUS &amp; <br className="hidden sm:block" />
+            BUILDING GOOD TOGETHER IN YOUR COMMUNITY!
+          </h2>
+
+          <button className="flex w-full sm:w-[320px] md:w-[524px] h-16 md:h-20 lg:h-28 items-center justify-center gap-2.5 px-6 py-4 relative bg-[#98bb3c] rounded-[30px] md:rounded-[60px]">
+            <p className="text-base sm:text-lg md:text-[length:var(--h4-bold-font-size)] relative w-fit font-h4-bold font-[number:var(--h4-bold-font-weight)] text-white tracking-[var(--h4-bold-letter-spacing)] leading-[var(--h4-bold-line-height)] [font-style:var(--h4-bold-font-style)]">
+              REACH OUT TO LEARN MORE
+            </p>
+          </button>
         </div>
       </section>
     </section>
