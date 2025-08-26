@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 export default function Footer() {
   const menuItems = [
     { text: "Home", path: "/" },
-    { text: "About Us", path: "/about" },
+    { text: "K12 Education", path: "/k12" },
     { text: "Your Community", path: "/community" },
     // { text: "K12 Education", path: "/education" },
     { text: "Contact", path: "/contact" },

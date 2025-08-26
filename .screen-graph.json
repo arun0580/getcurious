@@ -9,10 +9,10 @@
       "isRoot": true
     },
     {
-      "id": "src/screens/About.jsx",
-      "label": "About",
+      "id": "src/screens/K12.jsx",
+      "label": "K12",
       "routes": [
-        "/about"
+        "/k12"
       ]
     },
     {

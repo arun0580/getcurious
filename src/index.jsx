@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 
 // Screens
 import { Home } from "./screens/Home";
-import { About } from "./screens/About";
+import { K12 } from "./screens/K12";
 import { Community } from "./screens/Community";
 import { Contact } from "./screens/Contact";
 
@@ -21,7 +21,7 @@ createRoot(document.getElementById("app")).render(
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/k12" element={<K12 />} />
         <Route path="/community" element={<Community />} />
         {/*  <Route path="/k12" element={<K12 />} />*/}
         <Route path="/contact" element={<Contact />} />
