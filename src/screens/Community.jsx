@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../components/Button";
+import { motion } from "framer-motion";
 
 export const Community = () => {
   const communityLocations = [
@@ -104,22 +105,53 @@ export const Community = () => {
         {/* Hero Section */}
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4 md:px-12">
           {/* Left Column */}
-          <div className="space-y-6 order-2 md:order-1 relative">
-            <h1 className="text-[40px] md:text-[64px] [font-family:'Anton',Helvetica] font-normal text-[#98bb3c] leading-tight">
+          <motion.div
+            className="space-y-6 order-2 md:order-1 relative"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.25 }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.25 } },
+            }}
+          >
+            <motion.h1
+              className="text-[40px] md:text-[64px] [font-family:'Anton',Helvetica] font-normal text-[#98bb3c] leading-tight"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               Your Community.
               <br />
               Your Way.
               <br />
               All In One Place!
-            </h1>
+            </motion.h1>
 
-            <p className="[font-family:'Jost',Helvetica] font-normal text-[#565656] text-lg md:text-2xl leading-normal">
+            <motion.p
+              className="[font-family:'Jost',Helvetica] font-normal text-[#565656] text-lg md:text-2xl leading-normal"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               "A single platform where curious minds can explore everything
               about their community, connect with each other, support education,
               learn, grow, and do together with just a click!"
-            </p>
+            </motion.p>
 
-            <div className="flex justify-start">
+            <motion.div
+              className="flex justify-start"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               <div className="pt-4 cursor-pointer w-full md:w-[300px]">
                 <Button
                   property1="default"
@@ -127,91 +159,163 @@ export const Community = () => {
                   text={<>COMING SOON!</>}
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Decorative Image */}
-            <div className="absolute -top-6 right-0 w-40 md:w-96">
+            <motion.div
+              className="absolute -top-6 right-0 w-40 md:w-96"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            >
               <img
                 className="w-full h-auto object-contain"
                 alt="Community illustration"
                 src="https://c.animaapp.com/zIBKH2hr/img/mask-group@2x.png"
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Column */}
-          <div className="relative flex justify-center items-center order-1 md:order-2">
+          <motion.div
+            className="relative flex justify-center items-center order-1 md:order-2"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
             <img
               className="w-[300px] md:w-[500px] object-contain"
               alt="Community vector"
               src="https://c.animaapp.com/zIBKH2hr/img/vector-1@2x.png"
             />
-            <img
+            <motion.img
               className="absolute top-0 right-0 w-[100px] md:w-[200px] object-contain"
               alt="Community mask"
               src="https://c.animaapp.com/zIBKH2hr/img/mask-group-1@2x.png"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* Background full width */}
-      <div className="relative w-full mt-10 md:mt-20">
-        <img
+      <div className="relative w-full mt-10 md:mt-20 overflow-hidden">
+        <motion.img
           src="https://c.animaapp.com/zIBKH2hr/img/adobestock-412001654-preview-1@4x.png"
           alt="Background"
           className="w-full h-auto object-cover"
+          initial={{ opacity: 0, scale: 1.1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
         />
       </div>
       {/* Civic Engagement Section */}
       <section className="w-full bg-[#ffa5000a] py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <header className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="font-h3-semi-bold font-[number:var(--h3-semi-bold-font-weight)] text-[#222] text-2xl md:text-4xl leading-[32px] md:leading-[44px] lg:leading-[60px]">
+          <motion.header
+            className="max-w-4xl mx-auto text-center space-y-6"
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h2 className="font-h3-semi-bold text-[#222] text-2xl md:text-4xl leading-[32px] md:leading-[44px] lg:leading-[60px]">
               COMMUNITY & CIVIC ENGAGEMENT
               <br />
               Curious about "What's going on?" to <br />
               "How can we make it better!"
             </h2>
 
-            <p className="[font-family:'Jost',Helvetica] font-normal text-[#565656] text-lg md:text-2xl leading-relaxed">
+            <p className="font-normal text-[#565656] text-lg md:text-2xl leading-relaxed">
               Civic Engagement is essential to building strong communities. It
               isn't just about voting. It's about connecting, learning, acting,
               and building good together.
             </p>
-          </header>
+          </motion.header>
 
           {/* Community Locations */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-12 justify-items-center">
+          <motion.div
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-12 justify-items-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.15 } },
+            }}
+          >
             {communityLocations.map((location) => (
-              <div key={location.id} className="flex flex-col items-center">
+              <motion.div
+                key={location.id}
+                className="flex flex-col items-center"
+                variants={{
+                  hidden: { opacity: 0, scale: 0.6 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.5 },
+                  },
+                }}
+                whileHover={{ scale: 1.05 }}
+              >
                 <div className="relative">
                   <img
                     className="w-24 h-24 object-cover rounded-full"
                     alt={location.name}
                     src={location.image}
                   />
-                  <div className="absolute -top-2 -left-2 bg-[#98bb3c] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium">
+                  <motion.div
+                    className="absolute -top-2 -left-2 bg-[#98bb3c] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                  >
                     #{location.rank}
-                  </div>
+                  </motion.div>
                 </div>
                 <p className="font-body-text-regular text-maindarkprimary text-center mt-2">
                   {location.name}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Community News */}
-          <h3 className="text-xl md:text-2xl font-h5-semi-bold mt-16 text-center text-black">
+          <motion.h3
+            className="text-xl md:text-2xl font-h5-semi-bold mt-16 text-center text-black"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             Community News
-          </h3>
+          </motion.h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 ">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.2 } },
+            }}
+          >
             {communityNews.map((news) => (
-              <article
+              <motion.article
                 key={news.id}
                 className="flex flex-col bg-[#f9f9f9] rounded-[10px] border border-[#ececec] overflow-hidden"
+                variants={{
+                  hidden: { opacity: 0, y: 40 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                }}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0px 6px 20px rgba(0,0,0,0.1)",
+                }}
               >
                 <img
                   className="w-full h-48 object-cover"
@@ -233,7 +337,6 @@ export const Community = () => {
                         />
                         {news.likes} Likes
                       </span>
-
                       <span className="font-body-text-regular flex items-center">
                         <img
                           className="relative w-5 h-5 me-1"
@@ -250,36 +353,66 @@ export const Community = () => {
                     />
                   </div>
                 </div>
-              </article>
+              </motion.article>
             ))}
-          </div>
+          </motion.div>
 
           {/* Outro Text */}
-          <p className="max-w-2xl mx-auto mt-16 [font-family:'Anton',Helvetica] text-[#ffa500] text-xl md:text-2xl text-center">
+          <motion.p
+            className="max-w-2xl mx-auto mt-16 font-['Anton'] text-[#ffa500] text-xl md:text-2xl text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
             Curious about where to find your local community garden, how to
             volunteer, what's happening over the weekend, or maybe news from the
             Mayor's Office?
-          </p>
+          </motion.p>
 
-          <div className="flex justify-center mt-10">
+          <motion.div
+            className="flex justify-center mt-10"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, type: "spring", stiffness: 120 }}
+          >
             <img
               className="w-40 md:w-52"
               alt="Community illustration"
               src="https://c.animaapp.com/zIBKH2hr/img/frame-1991423886.svg"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="w-full bg-[#fff] py-12 px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side */}
-          <div className="space-y-6">
-            <h3 className="text-[#98bb3c] font-h3-semi-bold text-2xl md:text-4xl">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h3
+              className="text-[#98bb3c] font-h3-semi-bold text-2xl md:text-4xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               New to town? Just visiting?
-            </h3>
+            </motion.h3>
 
             {/* Hot Spots header */}
-            <div className="flex items-center justify-between pb-5">
+            <motion.div
+              className="flex items-center justify-between pb-5"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
               <div className="flex items-center gap-2 text-[#98bb3c] font-h5-medium text-lg">
                 <img
                   src="https://c.animaapp.com/zIBKH2hr/img/marker-pin-04.svg"
@@ -288,7 +421,7 @@ export const Community = () => {
                 />
                 Hot Spots - Geography
               </div>
-              <div className="flex items-center gap-1 text-[#98bb3c] font-medium underline  font-body-text-large text-lg cursor-pointer">
+              <div className="flex items-center gap-1 text-[#98bb3c] font-medium underline font-body-text-large text-lg cursor-pointer">
                 View all
                 <img
                   src="https://c.animaapp.com/zIBKH2hr/img/arrow-right.svg"
@@ -296,14 +429,33 @@ export const Community = () => {
                   className="w-4 h-4"
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Categories */}
-            <div className="grid grid-cols-3 sm:grid-cols-5 gap-6 pt-4 pb-12">
+            <motion.div
+              className="grid grid-cols-3 sm:grid-cols-5 gap-6 pt-4 pb-12"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: { staggerChildren: 0.15 },
+                },
+              }}
+            >
               {hotSpotCategories.map((category) => (
-                <div
+                <motion.div
                   key={category.id}
                   className="flex flex-col items-center gap-2"
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.5 },
+                    visible: {
+                      opacity: 1,
+                      scale: 1,
+                      transition: { duration: 0.5 },
+                    },
+                  }}
                 >
                   <div className="w-[90px] h-[90px] flex items-center justify-center rounded-full border-2 border-[#98bb3c] bg-white relative p-5">
                     <img
@@ -315,78 +467,158 @@ export const Community = () => {
                   <p className="text-sm text-[#222] font-body-text-large text-lg text-center">
                     {category.name}
                   </p>
-                </div>
+                </motion.div>
               ))}
-            </div>
-            <img
-              className="w-full  object-contain mt-10"
+            </motion.div>
+
+            <motion.img
+              className="w-full object-contain mt-10"
               alt="Decorative line"
               src="https://c.animaapp.com/zIBKH2hr/img/line-4.svg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
             />
-          </div>
+          </motion.div>
 
           {/* Right side */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+          <motion.div
+            className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <div className="flex-1 flex items-center w-full">
               {/* Left-aligned image */}
-              <div className="flex justify-center w-[200px]">
+              <motion.div
+                className="flex justify-center w-[200px]"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
                 <img
                   src="https://c.animaapp.com/zIBKH2hr/img/frame.svg"
                   alt="Community Streaks Icon"
                   className="w-14 h-24"
                 />
-              </div>
+              </motion.div>
 
               {/* Centered image */}
-              <div className="flex justify-center">
+              <motion.div
+                className="flex justify-center"
+                initial={{ opacity: 0, scale: 0.7 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.3,
+                  type: "spring",
+                  stiffness: 120,
+                }}
+              >
                 <img
                   src="https://c.animaapp.com/zIBKH2hr/img/image-42@2x.png"
                   alt="Community illustration"
                   className="w-24 md:w-40 object-contain"
                 />
-              </div>
+              </motion.div>
             </div>
 
-            <h4 className="text-[#ffa500] font-h4-semi-bold text-3xl w-full text-center">
+            <motion.h4
+              className="text-[#ffa500] font-h4-semi-bold text-3xl w-full text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.4, type: "spring" }}
+            >
               COMMUNITY STREAKS!
-            </h4>
+            </motion.h4>
 
-            <p className="text-[#565656] font-body-text-large text-xl pb-10 text-center">
+            <motion.p
+              className="text-[#565656] font-body-text-large text-xl pb-10 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
               Earn a streak every time you invite a friend, ask a question, use
               a resource and be entered to win weekly community drawings!
-            </p>
-            <img
+            </motion.p>
+
+            <motion.img
               className="w-full object-contain mt-10"
               alt="Decorative line"
               src="https://c.animaapp.com/zIBKH2hr/img/line-3.svg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             />
-          </div>
+          </motion.div>
         </div>
       </section>
-
       {/* Background full width */}
       <div className="relative w-full mt-10 md:mt-20">
-        <img
+        <motion.img
           src="assets/images/AdobeStock_157478294_Preview 1.png"
           alt="Background"
           className="w-full h-auto object-cover"
+          initial={{ opacity: 0, scale: 1.1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
         />
       </div>
       {/* Call to Action Section */}
-      <section className="w-full items-start gap-2.5 px-6 md:px-12 lg:px-[166px] py-10 md:py-[70px] bg-[#1d270c]">
+      <motion.section
+        className="w-full items-start gap-2.5 px-6 md:px-12 lg:px-[166px] py-10 md:py-[70px] bg-[#1d270c]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: "easeOut" },
+          },
+        }}
+      >
         <div className="max-w-7xl mx-auto flex flex-col gap-8 md:gap-12 items-center py-10 md:py-[70px]">
-          <h2 className="w-full relative self-stretch mt-[-1.00px] font-display-font-1-semi-bold text-[#ffa500] text-xl sm:text-2xl md:text-[length:var(--display-font-1-semi-bold-font-size)] leading-normal md:leading-snug font-[number:var(--display-font-1-semi-bold-font-weight)] text-center tracking-[var(--display-font-1-semi-bold-letter-spacing)] [font-style:var(--display-font-1-semi-bold-font-style)]">
-            JOIN US IN BEING CURIOUS &amp; <br className="hidden sm:block" />
+          <motion.h2
+            className="w-full relative self-stretch mt-[-1.00px] font-display-font-1-semi-bold text-[#ffa500] text-xl sm:text-2xl md:text-[length:var(--display-font-1-semi-bold-font-size)] leading-normal md:leading-snug font-[number:var(--display-font-1-semi-bold-font-weight)] text-center tracking-[var(--display-font-1-semi-bold-letter-spacing)] [font-style:var(--display-font-1-semi-bold-font-style)]"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            JOIN US IN BEING CURIOUS & <br className="hidden sm:block" />
             BUILDING GOOD TOGETHER IN YOUR COMMUNITY!
-          </h2>
+          </motion.h2>
 
-          <button className="flex w-full sm:w-[320px] md:w-[524px] h-16 md:h-20 lg:h-28 items-center justify-center gap-2.5 px-6 py-4 relative bg-[#98bb3c] rounded-[30px] md:rounded-[60px]">
-            <p className="text-base sm:text-lg md:text-[length:var(--h4-bold-font-size)] relative w-fit font-h4-bold font-[number:var(--h4-bold-font-weight)] text-white tracking-[var(--h4-bold-letter-spacing)] leading-[var(--h4-bold-line-height)] [font-style:var(--h4-bold-font-style)]">
+          <motion.button
+            className="flex w-full sm:w-[320px] md:w-[524px] h-16 md:h-20 lg:h-28 items-center justify-center gap-2.5 px-6 py-4 bg-[#98bb3c] rounded-[30px] md:rounded-[60px]"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.4,
+              type: "spring",
+              stiffness: 120,
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <p className="text-base sm:text-lg md:text-[length:var(--h4-bold-font-size)] font-h4-bold text-white">
               REACH OUT TO LEARN MORE
             </p>
-          </button>
+          </motion.button>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
