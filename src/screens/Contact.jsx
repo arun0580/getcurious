@@ -42,7 +42,7 @@ export const Contact = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen bg-white overflow-hidden bg-gray-50">
+    <div className="relative w-full min-h-screen overflow-hidden !bg-gray-50">
       {/* Hero Section */}
       <section className="relative max-w-7xl mx-auto px-6 sm:px-6 md:px-12 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
