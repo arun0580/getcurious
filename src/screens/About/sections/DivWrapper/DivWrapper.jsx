@@ -1,6 +1,20 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export const DivWrapper = () => {
+  const ref = useRef(null);
+
+  // Scroll progress tracking
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  // Parallax effect for background decoration (optional)
+  const yFloat1 = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const yFloat2 = useTransform(scrollYProgress, [0, 1], [0, 80]);
+
   const cards = [
     {
       title: "Improve Literacy & Math outcomes",
@@ -45,12 +59,33 @@ export const DivWrapper = () => {
   ];
 
   return (
-    <div className="relative max-w-7xl mx-auto px-4 md:px-12 py-20">
+    <section
+      ref={ref}
+      className="relative max-w-7xl mx-auto px-4 md:px-12 py-20 overflow-hidden"
+    >
+      {/* Floating decorative images with parallax */}
+      <motion.img
+        style={{ y: yFloat1 }}
+        src="/assets/images/deco-1.png"
+        alt="Floating decoration"
+        className="hidden md:block absolute top-[-80px] left-[-100px] w-32 h-auto opacity-40"
+      />
+      <motion.img
+        style={{ y: yFloat2 }}
+        src="/assets/images/deco-2.png"
+        alt="Floating decoration"
+        className="hidden md:block absolute bottom-[-80px] right-[-100px] w-36 h-auto opacity-40"
+      />
+
       {/* Responsive grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
         {cards.map((card, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.6 }}
+            viewport={{ once: true }}
             className="bg-white rounded-[20px] shadow-[0px_0px_12px_#0000001a] p-6 flex flex-col"
           >
             {/* Icon */}
@@ -69,9 +104,9 @@ export const DivWrapper = () => {
             <p className="font-body-text-regular text-[#535353] text-sm leading-relaxed">
               {card.text}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
