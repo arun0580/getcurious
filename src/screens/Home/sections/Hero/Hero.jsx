@@ -183,7 +183,7 @@ export const Hero = () => {
                   duration: 4,
                   ease: "easeInOut",
                 }}
-                className="absolute md:absolute w-[156px] h-[124px] top-[30px] md:top-[-30px] right-[0%]  md:right-[-4%] object-cover"
+                className="hidden md:block absolute w-[156px] h-[124px] top-[30px] md:top-[-30px] right-[0%] md:right-[-4%] object-cover"
                 alt="Floating"
                 src="/assets/images/image-2024-11-21t03-37-18-070z-1@2x.png"
               />
