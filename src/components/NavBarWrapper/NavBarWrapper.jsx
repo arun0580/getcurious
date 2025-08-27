@@ -10,9 +10,9 @@ export const NavBarWrapper = ({ className }) => {
   const location = useLocation(); // get current route
 
   const menuItems = [
+    { text: "About Us", path: "/about" },
     { text: "K12 Education", path: "/k12" },
     { text: "Your Community", path: "/community" },
-    // { text: "K12 Education", path: "/education" },
     { text: "Contact", path: "/contact" },
   ];
 
