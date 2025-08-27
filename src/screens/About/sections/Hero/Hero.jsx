@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative w-full bg-gradient-soft overflow-hidden py-20 lg:py-28"
+      className="relative w-full bg-[#ffa5000a]  overflow-hidden py-20 lg:py-28"
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-6 md:px-12">
         {/* Left Content */}
@@ -30,14 +30,22 @@ const Hero = () => {
           className="space-y-8"
         >
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-primary">GET CURIOUS</span>{" "}
+            <h1 className="text-[40px] md:text-[64px] [font-family:'Anton',Helvetica] font-normal text-[#98bb3c] leading-tight">
+              <span className="text-primary text-[#ffac00]">GET CURIOUS</span>{" "}
               <span className="text-secondary">TOGETHER</span>
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
+
+            <motion.p
+              className="[font-family:'Jost',Helvetica] font-normal text-[#565656] text-lg md:text-2xl leading-normal"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               "Empowering communities through collaborative learning and the
               transformative power of curiosity."
-            </p>
+            </motion.p>
           </div>
 
           <motion.p
@@ -45,7 +53,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-base sm:text-lg text-foreground leading-relaxed"
+            className="[font-family:'Jost',Helvetica] font-normal text-[#565656] text-lg md:text-2xl leading-normal"
           >
             Founded in 2024, Get Curious Together is a nonprofit organization
             built on the belief that curiosity connects people, ideas, and
@@ -54,21 +62,6 @@ const Hero = () => {
             voices, to spark learning and engagement for students, families,
             educators, and community leaders.
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-4"
-          >
-            <Button variant="hero" size="lg">
-              Explore Resources
-            </Button>
-            <Button variant="community" size="lg">
-              Join Our Community
-            </Button>
-          </motion.div>
         </motion.div>
 
         {/* Right Content (Image Card) */}
@@ -99,7 +92,7 @@ const Hero = () => {
             style={{ y: yImage2 }}
             src="/assets/images/image-2024-11-21t03-37-11-483z-1@2x.png"
             alt="Decoration bottom-right"
-            className="hidden md:block absolute -bottom-16 -right-24 w-36 h-auto object-cover"
+            className="hidden md:block absolute bottom-1 -right-24 w-36 h-auto object-cover"
           />
         </motion.div>
       </div>

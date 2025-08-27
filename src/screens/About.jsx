@@ -10,8 +10,8 @@ export const About = () => {
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       <Hero />
-      <AboutSection />
       <AdvisoryBoard />
+      <AboutSection />
       <CommunitySection />
     </div>
   );

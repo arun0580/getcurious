@@ -6,102 +6,120 @@ import { Button } from "../../../../components/Button";
 const AboutSection = () => {
   const ref = useRef(null);
 
-  // Scroll-based parallax
+  // Parallax float
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
-  const yImage1 = useTransform(scrollYProgress, [0, 1], [0, -60]); // float up
-  const yImage2 = useTransform(scrollYProgress, [0, 1], [0, 80]); // float down
+  const yFloat1 = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const yFloat2 = useTransform(scrollYProgress, [0, 1], [0, 80]);
+
+  const cards = [
+    {
+      img: "/assets/images/mask-group@2x.png",
+      title: "Community Learning",
+      text: `The heart and soul behind Get Curious Together is the conviction 
+      that learning is not just a classroom activity—it's a community endeavor. 
+      By weaving together education, culture, and civic engagement, 
+      we help communities celebrate what makes them unique 
+      while opening doors to new opportunities.`,
+    },
+    {
+      img: "/assets/images/mask-group-1@2x.png",
+      title: "Open Educational Resources",
+      text: `We believe in democratizing education through thousands of 
+      high-quality, free and openly-licensed educational resources (OERs). 
+      Learners can access OERs—in English and many other languages—
+      peer-reviewed, vetted, and ready to meet educators' needs.`,
+      cta: true,
+    },
+    {
+      img: "/assets/images/mask-group-2@2x.png",
+      title: "Empowering Students & Teachers",
+      text: `Already, our work is helping students explore beyond assignments, 
+      giving teachers tools that save time and spark engagement, 
+      and equipping communities to showcase their strengths 
+      and connect with families in new ways.`,
+    },
+  ];
 
   return (
     <section
       ref={ref}
-      className="relative py-16 lg:py-24 bg-background overflow-hidden"
+      className="relative max-w-7xl mx-auto px-4 md:px-12 py-20 overflow-hidden"
     >
-      {/* Decorative Parallax Images */}
+      {/* Floating decorations */}
       <motion.img
-        src="/images/pattern1.svg"
-        alt=""
-        className="absolute left-[-40px] top-10 w-32 opacity-30 pointer-events-none"
-        style={{ y: yImage1 }}
+        style={{ y: yFloat1 }}
+        src="/assets/images/deco-1.png"
+        alt="Floating decoration"
+        className="hidden md:block absolute top-[-80px] left-[-100px] w-32 h-auto opacity-40"
       />
       <motion.img
-        src="/images/pattern2.svg"
-        alt=""
-        className="absolute right-[-50px] bottom-10 w-40 opacity-30 pointer-events-none"
-        style={{ y: yImage2 }}
+        style={{ y: yFloat2 }}
+        src="/assets/images/deco-2.png"
+        alt="Floating decoration"
+        className="hidden md:block absolute bottom-[-80px] right-[-100px] w-36 h-auto opacity-40"
       />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
-            About <span className="text-primary">Our Mission</span>
-          </h2>
+      {/* Section heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-center font-h6-bold text-[#99b83b] text-[32px] md:text-[64px] leading-tight mb-12"
+      >
+        OUR MISSION
+      </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Left text column */}
-            <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                The heart and soul behind Get Curious Together is the conviction
-                that learning is not just a classroom activity—it's a community
-                endeavor. By weaving together education, culture, and civic
-                engagement, we help communities celebrate what makes them unique
-                while opening doors to new opportunities.
-              </p>
-
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Already, our work is helping students explore beyond
-                assignments, giving teachers tools that save time and spark
-                engagement, and equipping communities to showcase their
-                strengths and connect with families in new ways.
-              </p>
-            </div>
-
-            {/* Highlight card */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-community rounded-xl p-8 shadow-soft"
-            >
-              <h3 className="text-2xl font-semibold text-primary mb-6">
-                FREE & OPEN EDUCATIONAL RESOURCES (OERs) PLAY A KEY ROLE!
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                We believe in democratizing education through thousands of
-                high-quality, free and openly-licensed educational resources
-                (OERs). Our learners can access the power of OERs—in English and
-                numerous other languages—that are peer-reviewed, vetted, and
-                ready to meet educators' needs.
-              </p>
-              <div className="text-center">
-                <span className="inline-block bg-secondary text-secondary-foreground px-6 py-2 rounded-full font-semibold">
-                  Access Thousands of Free Resources
-                </span>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Closing statement */}
+      {/* Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+        {cards.map((card, index) => (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            key={index}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.15, duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center bg-muted rounded-xl p-8"
+            className="bg-white rounded-[20px] shadow-[0px_0px_12px_#0000001a] p-6 flex flex-col"
           >
-            <p className="text-xl font-medium text-foreground">
-              More than a platform, Get Curious Together is a{" "}
-              <span className="text-primary font-bold">movement</span>—inspiring
-              lifelong learning, strengthening civic pride, and building
-              connections that help entire communities thrive.
+            {/* Icon */}
+            <img
+              src={card.img}
+              alt={card.title}
+              className="w-[60px] h-[60px] mb-4"
+            />
+
+            {/* Title */}
+            <h3 className="font-h6-bold text-[#333333] text-2xl leading-snug mb-6">
+              {card.title}
+            </h3>
+
+            {/* Text */}
+            <p className="font-body-text-regular text-[#535353] text-lg leading-relaxed mb-4">
+              {card.text}
             </p>
           </motion.div>
-        </div>
+        ))}
       </div>
+
+      {/* Closing Statement */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="text-center bg-[#f8f8f8] rounded-[20px] shadow-[0px_0px_12px_#0000001a] p-8 mt-16"
+      >
+        <p className="font-body-text-regular text-[#333333] text-xl md:text-2xl leading-relaxed">
+          More than a platform, Get Curious Together is a{" "}
+          <span className="text-primary font-h6-bold">movement</span> —
+          inspiring lifelong learning, strengthening civic pride, and building
+          connections that help entire communities thrive.
+        </p>
+      </motion.div>
     </section>
   );
 };
