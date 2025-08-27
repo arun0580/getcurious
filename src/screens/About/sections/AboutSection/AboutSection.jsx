@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Users2, GraduationCap, BookOpen } from "lucide-react";
 import { Button } from "../../../../components/Button";
 
 const AboutSection = () => {
@@ -17,7 +18,7 @@ const AboutSection = () => {
 
   const cards = [
     {
-      img: "/assets/images/mask-group@2x.png",
+      icon: <Users2 className="w-12 h-12 text-accent mx-auto mb-4" />,
       title: "Community Learning",
       text: `The heart and soul behind Get Curious Together is the conviction 
       that learning is not just a classroom activity—it's a community endeavor. 
@@ -26,7 +27,7 @@ const AboutSection = () => {
       while opening doors to new opportunities.`,
     },
     {
-      img: "/assets/images/mask-group-1@2x.png",
+      icon: <BookOpen className="w-12 h-12 text-secondary mx-auto mb-4" />,
       title: "Open Educational Resources",
       text: `We believe in democratizing education through thousands of 
       high-quality, free and openly-licensed educational resources (OERs). 
@@ -35,7 +36,7 @@ const AboutSection = () => {
       cta: true,
     },
     {
-      img: "/assets/images/mask-group-2@2x.png",
+      icon: <GraduationCap className="w-12 h-12 text-primary mx-auto mb-4" />,
       title: "Empowering Students & Teachers",
       text: `Already, our work is helping students explore beyond assignments, 
       giving teachers tools that save time and spark engagement, 
@@ -86,19 +87,17 @@ const AboutSection = () => {
             className="bg-white rounded-[20px] shadow-[0px_0px_12px_#0000001a] p-6 flex flex-col"
           >
             {/* Icon */}
-            <img
-              src={card.img}
-              alt={card.title}
-              className="w-[60px] h-[60px] mb-4"
-            />
+            <div className="mb-4 flex justify-center mt-5 text-[#98bb3c] text-3xl">
+              {card.icon}
+            </div>
 
             {/* Title */}
-            <h3 className="font-h6-bold text-[#333333] text-2xl leading-snug mb-6">
+            <h3 className="font-h6-bold text-[#333333] text-2xl leading-snug mb-6 text-center">
               {card.title}
             </h3>
 
             {/* Text */}
-            <p className="font-body-text-regular text-[#535353] text-lg leading-relaxed mb-4">
+            <p className="font-body-text-regular text-[#535353] text-lg leading-relaxed mb-4 text-center">
               {card.text}
             </p>
           </motion.div>
@@ -113,10 +112,12 @@ const AboutSection = () => {
         viewport={{ once: true }}
         className="text-center bg-[#f8f8f8] rounded-[20px] shadow-[0px_0px_12px_#0000001a] p-8 mt-16"
       >
-        <p className="font-body-text-regular text-[#333333] text-xl md:text-2xl leading-relaxed">
+        <p className="font-body-text-regular text-[#333333] text-xl md:text-3xl leading-relaxed">
           More than a platform, Get Curious Together is a{" "}
-          <span className="text-primary font-h6-bold">movement</span> —
-          inspiring lifelong learning, strengthening civic pride, and building
+          <span className="text-primary font-h6-bold text-[#ffac00]">
+            movement
+          </span>{" "}
+          — inspiring lifelong learning, strengthening civic pride, and building
           connections that help entire communities thrive.
         </p>
       </motion.div>

@@ -134,7 +134,7 @@ const AdvisoryBoard = () => {
               <p className="font-body-text-regular text-[#ffac00] text-lg md:text-lg mb-3">
                 {advisor.title}
               </p>
-              <span className="inline-block font-body-text-regular bg-[#f5f5f5] text-[#535353] px-3 py-1 rounded-[5px] text-sm mb-4">
+              <span className="inline-block font-body-text-regular bg-[#98bb3c]/50 text-[#333] px-3 py-1 rounded-[5px] text-sm mb-4">
                 {advisor.specialization}
               </span>
               <p className="font-body-text-regular text-[#535353] text-base leading-relaxed">

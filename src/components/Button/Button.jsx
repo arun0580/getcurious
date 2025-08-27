@@ -18,7 +18,7 @@ export const Button = ({
 
   return (
     <motion.button
-      className={`all-[unset] box-border inline-flex items-center gap-2.5 px-6 py-4 rounded-[40px] justify-center relative ${
+      className={`all-[unset] box-border inline-flex items-center gap-2.5 px-6 py-4 rounded-[40px] justify-center relative cursor-pointer ${
         state.property1 === "variant-2" ? "bg-gold-600" : "bg-[#98bb3c]"
       } ${className}`}
       onMouseLeave={() => dispatch("mouse_leave")}
