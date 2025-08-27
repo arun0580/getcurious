@@ -44,7 +44,7 @@ const AdvisoryBoard = () => {
     {
       img: "/assets/images/jerry.png",
       name: "Jerry Adams",
-      title: "Economic Development & Research Leader",
+      title: "Economic Development & Research Lead",
       specialization: "Economic Development & Innovation Partnerships",
       bio: "Jerry Adams founded the Arkansas Research Alliance (ARA) in 2008 as a nonprofit, public-private economic development organization focused on investing in university research to change the economic trajectory of Arkansas.",
     },
@@ -65,7 +65,7 @@ const AdvisoryBoard = () => {
     {
       img: "/assets/images/mary.png",
       name: "Mary Lackie",
-      title: "Higher Education & Fundraising Leader",
+      title: "Higher Education & Fundraising Lead",
       specialization: "Educational Leadership & Strategic Partnerships",
       bio: "Mary Lackie is a higher education leader, fundraiser, and community builder with decades of experience in advancing educational opportunity and nonprofit impact.",
     },
