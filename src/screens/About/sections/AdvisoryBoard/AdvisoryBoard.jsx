@@ -79,7 +79,7 @@ const AdvisoryBoard = () => {
     {
       img: "/assets/images/vic.png",
       name: "Vic Dreier",
-      title: "Regional STEM Specialist & Executive Director",
+      title: "STEM Specialist & Executive Director",
       specialization: "STEM Education & Community Engagement",
       bio: "Vic Dreier is a STEM education leader with extensive experience in Project Lead the Way and statewide STEM initiatives, dedicated to expanding access to hands-on, high-quality STEM learning and strengthening connections between schools and communities.",
     },
