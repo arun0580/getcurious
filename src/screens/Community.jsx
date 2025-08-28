@@ -326,98 +326,68 @@ export const Community = () => {
             Community News
           </motion.h3>
 
-          <div className="relative mt-8 flex justify-center items-center">
-            <div className="flex gap-6 w-full max-w-7xl justify-center">
-              {visibleNews.map((news) => (
-                <motion.div
-                  key={news.id}
-                  className={`w-full ${
-                    newsPerPage === 3 ? "max-w-[32%]" : "max-w-md"
-                  }`}
-                  initial={{ opacity: 0, x: 80 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <motion.article
-                    className="flex flex-col bg-[#f9f9f9] rounded-[10px] border border-[#ececec] overflow-hidden"
-                    whileHover={{
-                      scale: 1.02,
-                      boxShadow: "0px 6px 20px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    <img
-                      className="w-full h-48 object-cover"
-                      alt="News"
-                      src={news.image}
-                    />
-                    <div className="p-4 flex flex-col gap-4">
-                      <h4 className="font-h7 text-[#040404]">{news.title}</h4>
-                      <p className="font-body-text-regular text-[#666]">
-                        {news.description}
-                      </p>
-                      <div className="flex items-center justify-between text-sm text-gray-700">
-                        <div className="flex gap-4">
-                          <span className="font-body-text-regular flex items-center">
-                            <img
-                              className="relative w-5 h-5 me-1"
-                              alt="Like icon"
-                              src="/assets/images/frame-7.svg"
-                            />
-                            {news.likes} Likes
-                          </span>
-                          <span className="font-body-text-regular flex items-center">
-                            <img
-                              className="relative w-5 h-5 me-1"
-                              alt="Comment icon"
-                              src="/assets/images/frame-8.svg"
-                            />
-                            {news.comments} Comments
-                          </span>
-                        </div>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.2 } },
+            }}
+          >
+            {communityNews.map((news) => (
+              <motion.article
+                key={news.id}
+                className="flex flex-col bg-[#f9f9f9] rounded-[10px] border border-[#ececec] border-0 overflow-hidden"
+                variants={{
+                  hidden: { opacity: 0, y: 40 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                }}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0px 6px 20px rgba(0,0,0,0.1)",
+                }}
+              >
+                <img
+                  className="w-full h-48 object-cover"
+                  alt="News"
+                  src={news.image}
+                />
+                <div className="p-4 flex flex-col gap-4">
+                  <h4 className="font-h7 text-[#040404]">{news.title}</h4>
+                  <p className="font-body-text-regular text-[#666]">
+                    {news.description}
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-gray-700">
+                    <div className="flex gap-4">
+                      <span className="font-body-text-regular flex items-center">
                         <img
-                          className="w-6 h-6"
-                          alt="Share icon"
-                          src="/assets/images/frame-9.svg"
+                          className="relative w-5 h-5 me-1"
+                          alt="Like icon"
+                          src="/assets/images/frame-7.svg"
                         />
-                      </div>
+                        {news.likes} Likes
+                      </span>
+                      <span className="font-body-text-regular flex items-center">
+                        <img
+                          className="relative w-5 h-5 me-1"
+                          alt="Comment icon"
+                          src="/assets/images/frame-8.svg"
+                        />
+                        {news.comments} Comments
+                      </span>
                     </div>
-                  </motion.article>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          <div className="flex items-center justify-between gap-4 mt-10 w-full max-w-7xl mx-auto">
-            <button
-              className="bg-[#b3c94e] hover:bg-[#a0b83c] rounded-full shadow flex items-center justify-center w-10 h-10 transition border-0 cursor-pointer disabled:opacity-50"
-              onClick={handlePrev}
-              aria-label="Previous"
-              disabled={currentNewsIndex === 0}
-            >
-              <FaChevronLeft className="text-white text-lg" />
-            </button>
-            <div className="flex gap-2">
-              {[...Array(communityNews.length - newsPerPage + 1)].map(
-                (_, idx) => (
-                  <button
-                    key={idx}
-                    className={`w-3 h-3 rounded-full border-0 cursor-pointer ${
-                      idx === currentNewsIndex ? "bg-[#98bb3c]" : "bg-[#ececec]"
-                    }`}
-                    onClick={() => setCurrentNewsIndex(idx)}
-                    aria-label={`Go to news set ${idx + 1}`}
-                  />
-                )
-              )}
-            </div>
-            <button
-              className="bg-[#b3c94e] hover:bg-[#a0b83c] rounded-full shadow flex items-center justify-center w-10 h-10 transition border-0 cursor-pointer disabled:opacity-50"
-              onClick={handleNext}
-              aria-label="Next"
-              disabled={currentNewsIndex === maxIndex}
-            >
-              <FaChevronRight className="text-white text-lg" />
-            </button>
-          </div>
+                    <img
+                      className="w-6 h-6"
+                      alt="Share icon"
+                      src="/assets/images/frame-9.svg"
+                    />
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </motion.div>
 
           {/* Outro Text */}
           <motion.p
@@ -505,7 +475,10 @@ export const Community = () => {
                     },
                   }}
                 >
-                  <div className="w-[90px] h-[90px] flex items-center justify-center rounded-full border-2 border-[#98bb3c] bg-white relative p-5">
+                  <div
+                    className="w-[90px] h-[90px] flex items-center justify-center rounded-full border-2 border-[#98bb3c] bg-white relative p-5"
+                    style={{ borderStyle: "solid" }}
+                  >
                     <img
                       src={category.icon}
                       alt={category.name}
