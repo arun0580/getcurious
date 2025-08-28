@@ -30,9 +30,9 @@ export const Hero = () => {
         i++;
         if (i === text1.length) {
           clearInterval(interval);
-          setTimeout(() => setStep(1), 500);
+          setTimeout(() => setStep(1), 250); // reduced delay
         }
-      }, 200);
+      }, 120); // reduced typing speed
       return () => clearInterval(interval);
     }
 
@@ -43,14 +43,14 @@ export const Hero = () => {
         j++;
         if (j === text2.length) {
           clearInterval(interval);
-          setTimeout(() => setStep(2), 800);
+          setTimeout(() => setStep(2), 400); // reduced delay
         }
-      }, 100);
+      }, 60); // reduced typing speed
       return () => clearInterval(interval);
     }
 
-    if (step === 2) setTimeout(() => setStep(3), 1200);
-    if (step === 3) setTimeout(() => setStep(4), 1000);
+    if (step === 2) setTimeout(() => setStep(3), 600); // reduced delay
+    if (step === 3) setTimeout(() => setStep(4), 500); // reduced delay
   }, [step]);
 
   return (
