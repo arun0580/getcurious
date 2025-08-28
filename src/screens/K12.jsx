@@ -98,9 +98,9 @@ export const K12 = () => {
             {/* Floating Decoration (optional) */}
             <motion.img
               style={{ y: yDeco }}
-              src="/assets/images/deco-yellow-1.png"
+              src="/assets/images/image-2024-11-21t03-37-11-483z-1@2x.png"
               alt="Decoration"
-              className="hidden md:block absolute -bottom-10 -right-14 w-28 h-auto opacity-40"
+              className="hidden md:block absolute bottom-10 -right-14 w-28 h-auto opacity-1"
             />
           </motion.div>
         </div>

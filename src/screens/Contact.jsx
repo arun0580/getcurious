@@ -28,11 +28,11 @@ export const Contact = () => {
 
   const contactInfo = [
     {
-      icon: "https://c.animaapp.com/gAVm8YZO/img/frame.svg",
+      icon: "/assets/images/frame-phone.svg",
       text: "(406) 555-0120",
     },
     {
-      icon: "https://c.animaapp.com/gAVm8YZO/img/frame-1.svg",
+      icon: "/assets/images/frame-1-mail.svg",
       text: "contactinfo@gmail.com",
     },
   ];
@@ -187,7 +187,7 @@ export const Contact = () => {
               <motion.img
                 className="w-60 lg:w-[243px] h-auto"
                 alt="Mask group"
-                src="https://c.animaapp.com/gAVm8YZO/img/mask-group@2x.png"
+                src="/assets/images/mask-group@contact.png"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}

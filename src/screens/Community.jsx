@@ -7,31 +7,31 @@ export const Community = () => {
     {
       id: 1,
       name: "Downtown Conway",
-      image: "https://c.animaapp.com/zIBKH2hr/img/ellipse-7@2x.png",
+      image: "/assets/images/ellipse-7@2x.png",
       rank: 1,
     },
     {
       id: 2,
       name: "Tucker Creek Walking/Bike Trail",
-      image: "https://c.animaapp.com/zIBKH2hr/img/ellipse-7-1@2x.png",
+      image: "/assets/images/ellipse-7-1@2x.png",
       rank: 2,
     },
     {
       id: 3,
       name: "Beaverfork Lake",
-      image: "https://c.animaapp.com/zIBKH2hr/img/ellipse-7-2@2x.png",
+      image: "/assets/images/ellipse-7-2@2x.png",
       rank: 3,
     },
     {
       id: 4,
       name: "Conway Public Library",
-      image: "https://c.animaapp.com/zIBKH2hr/img/ellipse-7-3@2x.png",
+      image: "/assets/images/ellipse-7-3@2x.png",
       rank: 4,
     },
     {
       id: 5,
       name: "The Village at Hendrix",
-      image: "https://c.animaapp.com/zIBKH2hr/img/ellipse-7-4@2x.png",
+      image: "/assets/images/ellipse-7-4@2x.png",
       rank: 5,
     },
   ];
@@ -42,7 +42,7 @@ export const Community = () => {
       title: "Mornings w/the Mayor's Office",
       description:
         "Stay informed on how local government decisions impact residents, business...",
-      image: "https://c.animaapp.com/zIBKH2hr/img/rectangle-77.svg",
+      image: "/assets/images/rectangle-77.svg",
       likes: 25,
       comments: 12,
     },
@@ -51,7 +51,7 @@ export const Community = () => {
       title: "City Council Weekly Roundup",
       description:
         "Catch up on the key points from the latest city council meeting...",
-      image: "https://c.animaapp.com/zIBKH2hr/img/rectangle-77-1.svg",
+      image: "/assets/images/rectangle-77-1.svg",
       likes: 18,
       comments: 7,
     },
@@ -60,7 +60,7 @@ export const Community = () => {
       title: "Community Cleanup Initiative",
       description:
         "Join the effort to make our community cleaner and greener this weekend...",
-      image: "https://c.animaapp.com/zIBKH2hr/img/rectangle-77-2.svg",
+      image: "/assets/images/rectangle-77-2.svg",
       likes: 42,
       comments: 20,
     },
@@ -70,31 +70,31 @@ export const Community = () => {
     {
       id: 1,
       name: "Food",
-      icon: "https://c.animaapp.com/zIBKH2hr/img/frame-181.svg",
+      icon: "/assets/images/frame-181.svg",
       isCustomIcon: true,
     },
     {
       id: 2,
       name: "Arts & Entertainment",
-      icon: "https://c.animaapp.com/zIBKH2hr/img/palette.svg",
+      icon: "/assets/images/palette.svg",
       isCustomIcon: false,
     },
     {
       id: 3,
       name: "People",
-      icon: "https://c.animaapp.com/zIBKH2hr/img/users-02.svg",
+      icon: "/assets/images/users-02.svg",
       isCustomIcon: false,
     },
     {
       id: 4,
       name: "Non-Profit",
-      icon: "https://c.animaapp.com/zIBKH2hr/img/frame-181-1.svg",
+      icon: "/assets/images/frame-181-1.svg",
       isCustomIcon: true,
     },
     {
       id: 5,
       name: "Schools",
-      icon: "https://c.animaapp.com/zIBKH2hr/img/graduation-hat-02.svg",
+      icon: "/assets/images/graduation-hat-02.svg",
       isCustomIcon: false,
     },
   ];
@@ -171,7 +171,7 @@ export const Community = () => {
               <img
                 className="w-full h-auto object-contain"
                 alt="Community illustration"
-                src="https://c.animaapp.com/zIBKH2hr/img/mask-group@2x.png"
+                src="/assets/images/mask-group@2x -com.png"
               />
             </motion.div>
           </motion.div>
@@ -187,12 +187,12 @@ export const Community = () => {
             <img
               className="w-[300px] md:w-[500px] object-contain"
               alt="Community vector"
-              src="https://c.animaapp.com/zIBKH2hr/img/vector-1@2x.png"
+              src="/assets/images/vector-1@2x.png"
             />
             <motion.img
               className="absolute top-0 right-0 w-[100px] md:w-[200px] object-contain"
               alt="Community mask"
-              src="https://c.animaapp.com/zIBKH2hr/img/mask-group-1@2x.png"
+              src="/assets/images/mask-group-1@2x-com.png"
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -202,7 +202,7 @@ export const Community = () => {
       {/* Background full width */}
       <div className="relative w-full mt-10 md:mt-20 overflow-hidden">
         <motion.img
-          src="https://c.animaapp.com/zIBKH2hr/img/adobestock-412001654-preview-1@4x.png"
+          src="/assets/images/adobestock-412001654-preview-1@4x.png"
           alt="Background"
           className="w-full h-auto object-cover"
           initial={{ opacity: 0, scale: 1.1 }}
@@ -333,7 +333,7 @@ export const Community = () => {
                         <img
                           className="relative w-5 h-5 me-1"
                           alt="Like icon"
-                          src="https://c.animaapp.com/zIBKH2hr/img/frame-7.svg"
+                          src="/assets/images/frame-7.svg"
                         />
                         {news.likes} Likes
                       </span>
@@ -341,7 +341,7 @@ export const Community = () => {
                         <img
                           className="relative w-5 h-5 me-1"
                           alt="Comment icon"
-                          src="https://c.animaapp.com/zIBKH2hr/img/frame-8.svg"
+                          src="/assets/images/frame-8.svg"
                         />
                         {news.comments} Comments
                       </span>
@@ -349,7 +349,7 @@ export const Community = () => {
                     <img
                       className="w-6 h-6"
                       alt="Share icon"
-                      src="https://c.animaapp.com/zIBKH2hr/img/frame-9.svg"
+                      src="/assets/images/frame-9.svg"
                     />
                   </div>
                 </div>
@@ -380,7 +380,7 @@ export const Community = () => {
             <img
               className="w-40 md:w-52"
               alt="Community illustration"
-              src="https://c.animaapp.com/zIBKH2hr/img/frame-1991423886.svg"
+              src="/assets/images/frame-1991423886.svg"
             />
           </motion.div>
         </div>
@@ -415,7 +415,7 @@ export const Community = () => {
             >
               <div className="flex items-center gap-2 text-[#98bb3c] font-h5-medium text-lg">
                 <img
-                  src="https://c.animaapp.com/zIBKH2hr/img/marker-pin-04.svg"
+                  src="/assets/images/marker-pin-04.svg"
                   alt="marker"
                   className="w-5 h-5"
                 />
@@ -424,7 +424,7 @@ export const Community = () => {
               <div className="flex items-center gap-1 text-[#98bb3c] font-medium underline font-body-text-large text-lg cursor-pointer">
                 View all
                 <img
-                  src="https://c.animaapp.com/zIBKH2hr/img/arrow-right.svg"
+                  src="/assets/images/arrow-right.svg"
                   alt="arrow"
                   className="w-4 h-4"
                 />
@@ -474,7 +474,7 @@ export const Community = () => {
             <motion.img
               className="w-full object-contain mt-10"
               alt="Decorative line"
-              src="https://c.animaapp.com/zIBKH2hr/img/line-4.svg"
+              src="/assets/images/line-4.svg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -500,7 +500,7 @@ export const Community = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <img
-                  src="https://c.animaapp.com/zIBKH2hr/img/frame.svg"
+                  src="/assets/images/frame.svg"
                   alt="Community Streaks Icon"
                   className="w-14 h-24"
                 />
@@ -520,7 +520,7 @@ export const Community = () => {
                 }}
               >
                 <img
-                  src="https://c.animaapp.com/zIBKH2hr/img/image-42@2x.png"
+                  src="/assets/images/image-42@2x.png"
                   alt="Community illustration"
                   className="w-24 md:w-40 object-contain"
                 />
@@ -551,7 +551,7 @@ export const Community = () => {
             <motion.img
               className="w-full object-contain mt-10"
               alt="Decorative line"
-              src="https://c.animaapp.com/zIBKH2hr/img/line-3.svg"
+              src="/assets/images/line-3.svg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

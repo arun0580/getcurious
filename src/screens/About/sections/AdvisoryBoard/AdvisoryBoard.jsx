@@ -76,6 +76,13 @@ const AdvisoryBoard = () => {
       specialization: "Educational Equity & Student Well-being",
       bio: "Kanesha Adams is an educator, entrepreneur, and advocate for equity whose work has opened doors for countless young learners and families.",
     },
+    {
+      img: "/assets/images/vic.png",
+      name: "Vic Dreier",
+      title: "Regional STEM Specialist & Executive Director",
+      specialization: "STEM Education & Community Engagement",
+      bio: "Vic Dreier is a STEM education leader with extensive experience in Project Lead the Way and statewide STEM initiatives, dedicated to expanding access to hands-on, high-quality STEM learning and strengthening connections between schools and communities.",
+    },
   ];
 
   return (
@@ -109,7 +116,7 @@ const AdvisoryBoard = () => {
       </motion.h2>
 
       {/* Advisors Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10 justify-items-center">
         {advisors.map((advisor, i) => (
           <motion.div
             key={i}
@@ -117,7 +124,12 @@ const AdvisoryBoard = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 + i * 0.1, duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-[20px] shadow-[0px_0px_12px_#0000001a] flex flex-col overflow-hidden p-6"
+            className={`bg-white rounded-[20px] shadow-[0px_0px_12px_#0000001a] flex flex-col overflow-hidden p-6 
+        ${
+          i === advisors.length - 1
+            ? "lg:col-span-3 lg:justify-self-center w-full sm:w-2/3 lg:w-1/3"
+            : ""
+        }`}
           >
             {/* Advisor Image */}
             <img
