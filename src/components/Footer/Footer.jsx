@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaFacebookF,
   FaLinkedinIn,
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
 
 import { SiX } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -17,6 +18,22 @@ export default function Footer() {
 
     { text: "Contact", path: "/contact" },
   ];
+
+  // Scroll to top handler
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Show scroll-to-top button only after first screen height
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > window.innerHeight);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <footer
@@ -200,6 +217,17 @@ export default function Footer() {
           </a>
         </div>
       </motion.div>
+
+      {/* Floating Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={handleScrollTop}
+          className="fixed bottom-8 right-8 z-50 bg-orange-500 hover:bg-orange-600 text-white p-4 rounded-full shadow-lg transition-colors text-2xl flex items-center justify-center [font-family:'Anton',Helvetica] border-0 outline-none !cursor-pointer"
+          aria-label="Scroll to top"
+        >
+          <FaArrowUp />
+        </button>
+      )}
     </footer>
   );
 }
