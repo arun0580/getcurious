@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Button } from "../components/Button";
 import { DivWrapper } from "./K12/sections/DivWrapper";
 import { SomethingWrapper } from "./K12/sections/SomethingWrapper";
@@ -20,6 +20,18 @@ export const K12 = () => {
   const yDeco1 = useTransform(scrollYProgress, [0, 1], [0, 40]);
   const yDeco2 = useTransform(scrollYProgress, [0, 1], [0, -30]);
   const yDeco3 = useTransform(scrollYProgress, [0, 1], [0, 50]);
+
+  // Responsive aspect ratio for SVG curve
+  const getAspectRatio = () =>
+    window.innerWidth < 768 ? "1440 / 360" : "1440 / 240";
+  const [aspectRatio, setAspectRatio] = useState(getAspectRatio());
+
+  useEffect(() => {
+    const handleResize = () => setAspectRatio(getAspectRatio());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Hero Section */}
@@ -190,8 +202,40 @@ export const K12 = () => {
         </div>
       </section>
 
-      <div className="relative w-full bg-[url('/assets/images/green-bar.png')] bg-no-repeat bg-top bg-[length:100%_auto] py-20 mt-20">
-        <SomethingWrapper />
+      <div
+        className="relative w-full py-20 mt-20"
+        style={{ position: "relative" }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            aspectRatio: aspectRatio, // Responsive aspect ratio
+            background: "none",
+            zIndex: 1,
+            pointerEvents: "none",
+            transform: "rotate(180deg)",
+            overflow: "hidden",
+          }}
+        >
+          <svg
+            viewBox="0 0 1440 120"
+            width="100%"
+            height="100%"
+            preserveAspectRatio="none"
+            style={{ display: "block" }}
+          >
+            <path
+              fill="#c6db8b"
+              d="M0,40 C480,160 960,-40 1440,60 L1440,120 L0,120 Z"
+            />
+          </svg>
+        </div>
+        <div style={{ position: "relative", zIndex: 2 }}>
+          <SomethingWrapper />
+        </div>
       </div>
       <div className="relative w-full bg-[url(/assets/images/adobestock-946446396-1.png)] bg-cover bg-[50%_50%] mt-10 py-10">
         <DivWrapper />
