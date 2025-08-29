@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../components/Button";
 import { motion } from "framer-motion";
 
@@ -7,11 +7,10 @@ export const Contact = () => {
     firstName: "",
     lastName: "",
     email: "",
-    address: "",
-    schoolName: "",
-    subject: "",
     message: "",
   });
+
+  const [status, setStatus] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,10 +20,40 @@ export const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  // Send mail using fetch to a backend API (example using Formspree, replace with your backend if needed)
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setStatus("Sending...");
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setStatus("Failed to send message.");
+      }
+    } catch {
+      setStatus("Failed to send message.");
+    }
   };
+
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => setStatus(""), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const contactInfo = [
     {
@@ -94,19 +123,6 @@ export const Contact = () => {
                   type: "email",
                   required: true,
                 },
-                {
-                  label: "Address",
-                  name: "address",
-                  type: "text",
-                  required: true,
-                },
-                { label: "Name of School", name: "schoolName", type: "text" },
-                {
-                  label: "Subject",
-                  name: "subject",
-                  type: "text",
-                  required: true,
-                },
               ].map((field, index) => (
                 <motion.div
                   key={index}
@@ -115,6 +131,7 @@ export const Contact = () => {
                     visible: { opacity: 1, y: 0 },
                   }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
+                  className={field.name === "email" ? "md:col-span-2" : ""}
                 >
                   <label
                     htmlFor={field.name}
@@ -150,12 +167,14 @@ export const Contact = () => {
                   className="font-h7 text-[#2d2d2d] block mb-2"
                 >
                   Message
+                  <span className="text-[#bb5502]">*</span>
                 </label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full h-40 bg-white rounded-[10px] px-4 py-2 border-0 outline-none resize-none"
+                  required
                 />
               </motion.div>
 
@@ -170,6 +189,18 @@ export const Contact = () => {
                   className="w-full cursor-pointer"
                   text={<>Submit</>}
                 />
+                {status && (
+                  <div
+                    className={`mt-4 text-center font-body-text-large font-semibold rounded-lg py-3 transition-all ${
+                      status === "Message sent successfully!"
+                        ? "bg-[#e6f7d9] text-[#3c763d] border border-[#98bb3c] shadow"
+                        : "bg-[#ffeaea] text-[#a94442] border border-[#ffacac] shadow"
+                    }`}
+                    style={{ fontSize: "1.15rem" }}
+                  >
+                    {status}
+                  </div>
+                )}
               </motion.div>
             </motion.form>
           </motion.div>
